@@ -21,7 +21,7 @@ internal sealed class PageInfo
 
 	public int Group;
 
-	public static readonly PageInfo[] All = new PageInfo[13]
+	public static readonly PageInfo[] All = new PageInfo[14]
 	{
 		new PageInfo(0, "general", "General", "Startup, shortcut, time and units", "settings_f", "#6E6E76", "#4A4A52", "startup shortcut time units language"),
 		new PageInfo(0, "notch", "Notch", "Shape, behavior and live preview", "notch_f", "#48484E", "#2A2A2E", "shape style behavior visibility"),
@@ -34,6 +34,7 @@ internal sealed class PageInfo
 		new PageInfo(1, "guard", "Network Guard", "Block adult, betting and ads on your Wi-Fi", "grid_f", "#FF453A", null, "dns wifi block porn betting ads guard"),
 		new PageInfo(1, "todo", "To-Do List", "Your tasks, stored on this PC", "contrast_f", "#FF9F0A", null, "todo task tasks list reminder"),
 		new PageInfo(1, "wifi", "Wi-Fi QR", "Share your Wi-Fi password with a QR code", "info_f", "#0A84FF", null, "wifi qr share password hotspot"),
+		new PageInfo(1, "pets", "Pets", "Ditto, Cat, Husky, Pikachu, Doraemon and more", "contrast_f", "#30D158", null, "pet cat dog husky ditto pikachu doraemon grok"),
 		new PageInfo(2, "license", "License & Updates", "Your plan, this PC's activation and updates", "key_f", "#30D158", null, "license key activate pro purchase updates version"),
 		new PageInfo(2, "about", "About", "Ayn, the notch for Windows", "info_f", "#0A84FF", null, "about version support")
 	};

@@ -11,6 +11,6 @@ public sealed class EyesOptions
 	public EyesOptions()
 	{
 		Skin = "ayn";
-		Emotion = "neutral";
+		Emotion = "auto";
 	}
 }

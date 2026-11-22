@@ -6,6 +6,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using System.Security.Cryptography;
+using System.Security.Principal;
 using System.Text;
 using WindowsBuddy.Core;
 using WindowsBuddy.Services.Lifecycle;
@@ -195,7 +196,9 @@ public static class CredentialStore
 
 	private const string Magic = "\u0001VCR1\n";
 
-	private static readonly byte[] EntropySalt = Encoding.UTF8.GetBytes("Ayn_SecurityEntropy_2026");
+	private static readonly byte[] EntropySalt = Encoding.UTF8.GetBytes(
+		"Ayn:" + (WindowsIdentity.GetCurrent().User?.Value ?? Environment.UserName));
+
 
 	private static readonly UTF8Encoding Utf8 = new UTF8Encoding(encoderShouldEmitUTF8Identifier: false);
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text.Json;
 using WindowsBuddy.Services;
 
@@ -27,7 +28,7 @@ public sealed class AynExtrasConfig
     public bool BlockPorn { get; set; } = true;
     public bool BlockBetting { get; set; } = true;
     public bool BlockAds { get; set; } = true;
-    public bool BlockApps { get; set; } = true;
+    public bool BlockApps { get; set; }
     public int DnsPort { get; set; } = 5354;
     public string UpstreamDns { get; set; } = "1.1.1.1";
 
@@ -49,14 +50,34 @@ public sealed class AynExtrasConfig
         try
         {
             if (File.Exists(ConfigPath))
-                return JsonSerializer.Deserialize<AynExtrasConfig>(File.ReadAllText(ConfigPath), Options) ?? new();
+            {
+                var loaded = JsonSerializer.Deserialize<AynExtrasConfig>(File.ReadAllText(ConfigPath), Options) ?? new();
+                loaded.Sanitize();
+                return loaded;
+            }
         }
         catch { }
         return new();
     }
 
+    private static readonly string[] AllowedResolvers =
+    [
+        "1.1.1.1", "1.0.0.1", "8.8.8.8", "8.8.4.4", "9.9.9.9", "208.67.222.222", "208.67.220.220"
+    ];
+
+    public void Sanitize()
+    {
+        if (DnsPort < 1024 || DnsPort > 65535) DnsPort = 5354;
+        var candidate = (UpstreamDns ?? "").Trim();
+        if (!AllowedResolvers.Contains(candidate)) UpstreamDns = "1.1.1.1";
+        if (BlockApps) BlockApps = false;
+        WorkMinutes = Math.Clamp(WorkMinutes, 1, 480);
+        BreakMinutes = Math.Clamp(BreakMinutes, 1, 60);
+    }
+
     public void Save()
     {
+        Sanitize();
         try
         {
             Directory.CreateDirectory(AppPaths.DataDir);

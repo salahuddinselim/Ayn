@@ -385,6 +385,7 @@ internal sealed class EyesEngine
 			smile = Math.Max(0f, Math.Min(1f, smile));
 			blink = Math.Max(0f, Math.Min(1f, blink));
 			string emotion = EyeEmotions.Normalize(EyesPreferences.Instance.Emotion);
+			if (emotion == "auto") emotion = EyeEmotions.Evaluate();
 			switch (emotion)
 			{
 			case "happy":
@@ -441,22 +442,28 @@ internal sealed class EyesEngine
 
 	private void DrawEmotionOverlay(string emotion, float t)
 	{
+		c.ResetClip();
 		if (emotion == "sad" || emotion == "cry" || emotion == "ego")
 		{
-			solid.SetSolid(18, 18, 22, 0.9f);
-			float tilt = emotion == "ego" ? -0.3f : 0.3f;
-			c.Ellipse(104f, 9f, 9f, 1.9f, tilt);
+			solid.SetSolid(20, 20, 24, 0.72f);
+			float tilt = emotion == "ego" ? -0.32f : 0.32f;
+			c.Ellipse(104f, 8.5f, 7.5f, 1.6f, tilt);
 			c.Fill(solid, 1f);
-			c.Ellipse(136f, 9f, 9f, 1.9f, -tilt);
+			c.Ellipse(136f, 8.5f, 7.5f, 1.6f, -tilt);
 			c.Fill(solid, 1f);
 		}
 		if (emotion == "cry")
 		{
-			var pulse = 0.85f + 0.15f * (float)Math.Sin(t * 3.0);
-			solid.SetSolid(96, 178, 255, 0.92f);
-			c.Ellipse(104f, 33f, 2.0f, 3.6f * pulse, 0f);
+			var pulse = 0.9f + 0.1f * (float)Math.Sin(t * 2.4);
+			solid.SetSolid(110, 190, 255, 0.9f);
+			c.Ellipse(104f, 36f, 1.9f, 3.4f * pulse, -0.12f);
 			c.Fill(solid, 1f);
-			c.Ellipse(136f, 35f, 1.7f, 3.0f * pulse, 0f);
+			c.Ellipse(136f, 37f, 1.6f, 2.9f * pulse, 0.12f);
+			c.Fill(solid, 1f);
+			solid.SetSolid(235, 248, 255, 0.85f);
+			c.Ellipse(103.4f, 34.8f, 0.6f, 0.9f, 0f);
+			c.Fill(solid, 1f);
+			c.Ellipse(135.5f, 35.8f, 0.5f, 0.7f, 0f);
 			c.Fill(solid, 1f);
 		}
 	}

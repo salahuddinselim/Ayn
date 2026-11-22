@@ -112,7 +112,12 @@ public sealed class DocConvertTool : AynPersonalToolBase
                 RedirectStandardError = true
             };
             using var process = Process.Start(psi);
-            process?.WaitForExit(60000);
+            if (process != null && !process.WaitForExit(60000))
+            {
+                try { process.Kill(true); } catch { }
+                _status.Text = "Conversion timed out and was stopped.";
+                return;
+            }
             var expected = Path.Combine(outDir, Path.GetFileNameWithoutExtension(_source) + "." + target);
             _status.Text = File.Exists(expected)
                 ? "Saved: " + expected

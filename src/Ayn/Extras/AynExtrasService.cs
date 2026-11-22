@@ -49,6 +49,9 @@ public sealed class AynExtrasService : IDisposable
 
     private UdpClient? _listener;
     private CancellationTokenSource? _dnsCts;
+    private readonly SemaphoreSlim _dnsSlots = new(32);
+    private readonly Dictionary<string, (long Ticks, int Count)> _dnsRate = new();
+    private readonly object _rateLock = new();
     private TimeSpan _activeWork;
     private TimeSpan _activeBreak;
     private bool _onBreak;
@@ -212,11 +215,45 @@ public sealed class AynExtrasService : IDisposable
             try
             {
                 var result = await _listener.ReceiveAsync(token);
-                _ = Task.Run(() => HandleDns(result.Buffer, result.RemoteEndPoint));
+                if (!IsValidDnsQuery(result.Buffer)) continue;
+                if (!await _dnsSlots.WaitAsync(0, token)) continue;
+                if (!AllowDnsClient(result.RemoteEndPoint.Address)) { _dnsSlots.Release(); continue; }
+                _ = Task.Run(() =>
+                {
+                    try { HandleDns(result.Buffer, result.RemoteEndPoint); }
+                    finally { _dnsSlots.Release(); }
+                });
             }
             catch (OperationCanceledException) { break; }
             catch (SocketException) { }
             catch { }
+        }
+    }
+
+    private static bool IsValidDnsQuery(byte[] p)
+    {
+        if (p.Length < 12 || p.Length > 4096) return false;
+        if ((p[2] & 0x80) != 0) return false;
+        if (((p[2] & 0x78) >> 3) != 0) return false;
+        var qd = (p[4] << 8) | p[5];
+        return qd == 1;
+    }
+
+    private bool AllowDnsClient(IPAddress address)
+    {
+        var key = address.ToString();
+        var now = DateTime.UtcNow.Ticks;
+        lock (_rateLock)
+        {
+            if (_dnsRate.TryGetValue(key, out var entry) && now - entry.Ticks < TimeSpan.FromSeconds(1).Ticks)
+            {
+                if (entry.Count >= 40) return false;
+                _dnsRate[key] = (entry.Ticks, entry.Count + 1);
+                return true;
+            }
+            _dnsRate[key] = (now, 1);
+            if (_dnsRate.Count > 512) _dnsRate.Clear();
+            return true;
         }
     }
 
@@ -250,9 +287,11 @@ public sealed class AynExtrasService : IDisposable
     {
         if (string.IsNullOrWhiteSpace(domain)) return null;
         var lower = domain.ToLowerInvariant();
-        if (Config.BlockPorn && PornDomains.Any(d => lower.Contains(d))) return "Adult";
-        if (Config.BlockBetting && BettingDomains.Any(d => lower.Contains(d))) return "Betting";
-        if (Config.BlockAds && AdDomains.Any(d => lower.Contains(d))) return "Ads";
+        bool Match(string d) => lower.Equals(d, StringComparison.OrdinalIgnoreCase) ||
+                                lower.EndsWith("." + d, StringComparison.OrdinalIgnoreCase);
+        if (Config.BlockPorn && PornDomains.Any(Match)) return "Adult";
+        if (Config.BlockBetting && BettingDomains.Any(Match)) return "Betting";
+        if (Config.BlockAds && AdDomains.Any(Match)) return "Ads";
         return null;
     }
 
@@ -263,9 +302,15 @@ public sealed class AynExtrasService : IDisposable
             if (!IPAddress.TryParse(Config.UpstreamDns, out var upstream)) upstream = IPAddress.Parse("1.1.1.1");
             using var udp = new UdpClient(new IPEndPoint(IPAddress.Any, 0));
             udp.Client.ReceiveTimeout = 3000;
-            udp.Send(query, query.Length, new IPEndPoint(upstream, 53));
+            var upstreamEp = new IPEndPoint(upstream, 53);
+            udp.Send(query, query.Length, upstreamEp);
             var remote = new IPEndPoint(IPAddress.Any, 0);
             var response = udp.Receive(ref remote);
+            if (!remote.Address.Equals(upstream) || remote.Port != 53) return;
+            if (response.Length < query.Length || response.Length > 4096) return;
+            if (response[0] != query[0] || response[1] != query[1]) return;
+            for (var i = 12; i < query.Length; i++)
+                if (response[i] != query[i]) return;
             _listener?.Send(response, response.Length, client);
         }
         catch { }
@@ -312,12 +357,15 @@ public sealed class AynExtrasService : IDisposable
     private void CheckApps(object? _)
     {
         if (!Config.BlockApps) return;
+        var self = Environment.ProcessId;
         foreach (var process in Process.GetProcesses())
         {
             try
             {
-                if (BettingProcesses.Any(p => process.ProcessName.IndexOf(p, StringComparison.OrdinalIgnoreCase) >= 0))
-                    process.Kill(true);
+                if (process.Id == self) continue;
+                var name = process.ProcessName.Trim();
+                if (BettingProcesses.Any(p => name.Equals(p, StringComparison.OrdinalIgnoreCase)))
+                    process.Kill();
             }
             catch { }
         }

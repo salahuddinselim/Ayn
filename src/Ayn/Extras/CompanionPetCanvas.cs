@@ -29,6 +29,10 @@ public sealed class CompanionPetCanvas : FrameworkElement
         set => SetValue(KindProperty, value);
     }
 
+    protected override Size MeasureOverride(Size availableSize) => new Size(Width, Height);
+
+    protected override Size ArrangeOverride(Size finalSize) => finalSize;
+
     protected override void OnRender(DrawingContext d)
     {
         base.OnRender(d);

@@ -10,6 +10,7 @@ namespace WindowsBuddy.Tools.Personal;
 public sealed class PetsTool : AynPersonalToolBase
 {
     private CompanionPetCanvas _pet;
+    private TextBlock _name;
     private static readonly string[] Kinds = ["ditto", "cat", "husky", "pikachu", "doraemon", "dots", "grok", "robot"];
 
     public PetsTool() => OrderIndex = 9;
@@ -26,6 +27,14 @@ public sealed class PetsTool : AynPersonalToolBase
     {
         var root = new StackPanel { Margin = new Thickness(18, 12, 18, 12) };
         root.Children.Add(BreaksTool.Heading("Pets"));
+        _name = new TextBlock
+        {
+            Text = Label(AynExtrasService.Instance.Config.PetKind),
+            Foreground = ThemeTokens.Text2,
+            FontSize = 12,
+            Margin = new Thickness(0, 4, 0, 0)
+        };
+        root.Children.Add(_name);
         _pet = new CompanionPetCanvas { Kind = AynExtrasService.Instance.Config.PetKind };
         root.Children.Add(_pet);
 
@@ -47,6 +56,7 @@ public sealed class PetsTool : AynPersonalToolBase
             button.Click += (_, _) =>
             {
                 _pet.Kind = chosen;
+                _name.Text = Label(chosen);
                 AynExtrasService.Instance.Config.PetKind = chosen;
                 AynExtrasService.Instance.Config.Save();
             };

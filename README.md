@@ -1,42 +1,60 @@
 # Ayn — العين
 
-**Ayn** ("the eye" in Arabic) is a free, open-source Windows desktop companion by **SabrWare**.
-It puts a small animated notch at the top of your screen with eyes, widgets and modules, and
-keeps everything on your PC. No account, no subscription, no license key, no purchase.
+**Ayn** ("the eye" in Arabic) is a free, open-source Windows companion by **SabrWare**.
+It places a small animated notch at the top of your screen with eyes, widgets and modules.
+Everything stays on your PC — no account, no subscription, no license key, no purchase.
 
-Repository: <https://github.com/salahuddinselim/Ayn>
+## Download
 
-## What it does
+**One-click installer (Windows x64):** [Download Ayn-Setup.msi](https://github.com/salahuddinselim/Ayn/raw/main/Installer/Ayn-Setup.msi)
 
-- **The notch** — a small always-on-top pill with two animated eyes that follow your cursor.
-- **Eye emotions** — happy, sad, cry, ego, surprised, sleepy or neutral (Settings → Notch).
-- **Pets** — Ditto, Cat, Husky, Pikachu, Doraemon, ChatGPT-style dots, Grok and Robot.
-- **Home page** — screen time, CPU/RAM/disk, weather, focus timer, clipboard, notes and live internet speed.
-- **Breaks & Meals** — a nudge after a configurable amount of computer time, plus lunch and dinner reminders.
-- **Salat times** — calculated for your city/area. Type a city or press "Use my area" for IP-based detection.
-- **Network Guard** — a local DNS sinkhole that blocks adult sites, betting sites/apps and ads on your Wi‑Fi.
-- **QR & Wi‑Fi Share** — create a QR for any text, generate a Wi‑Fi QR from a saved network, and serve it on your LAN.
+Double-click the downloaded `Ayn-Setup.msi` and follow the installer. A Start Menu entry and
+an optional desktop shortcut are created. No administrator rights are required.
+
+- Source and releases: <https://github.com/salahuddinselim/Ayn>
+- Latest release page: <https://github.com/salahuddinselim/Ayn/releases/latest>
+
+## Credit and acknowledgements
+
+Ayn's interface and original module set were reconstructed from the shipped Windows app
+**Vayli** by **Modi Studio** (Microsoft Store, version 1.1.62.0) using static reverse
+engineering. Full credit for the original design, eye renderer, edge-light effects,
+notch behaviour and module architecture goes to **Modi Studio**. Ayn is a separate,
+independent, free and open-source rebuild by SabrWare, with the original commercial
+licensing, activation and payment flows removed and new personal features added.
+
+Thanks also to the open-source projects used by Ayn: WiX Toolset (installer), QRCoder
+(QR codes), Microsoft.Data.Sqlite (local OpenCode usage), LibreOffice (optional document
+conversion) and the .NET/WPF platform.
+
+## Features
+
+- **The notch** — an always-on-top pill with two animated eyes that follow the cursor.
+- **Automatic emotions** — the eyes react on their own to time of day, battery, focus,
+  idle state and activity: happy, sad, sleepy, surprised, ego and cry. No settings toggle.
+- **Pets** — Ditto, Cat, Husky, Pikachu, Doraemon, ChatGPT-style dots, Grok and Robot,
+  drawn and animated in-app with no downloads required.
+- **Home** — screen time, CPU/RAM/disk, weather, focus timer, clipboard, notes and live
+  internet speed.
+- **Breaks & Meals** — a nudge after configurable computer time, plus lunch and dinner reminders.
+- **Salat times** — calculated from your city or IP-detected area.
+- **Network Guard** — a local DNS sinkhole blocking adult sites, betting sites/apps and ads.
+- **QR & Wi-Fi Share** — make a QR for any text, generate a Wi-Fi QR from saved networks,
+  and serve it on your LAN so other devices can scan it.
 - **To-Do List** — add, complete and remove tasks; stored locally.
-- **File Converter** — images and PDF to JPG, PNG, PDF, ICO, BMP, GIF and TIFF.
-- **Doc Converter** — documents to PDF, DOCX, XLSX, PPTX, RTF, TXT, HTML, ODT and CSV (uses LibreOffice if installed).
-- **Screen Time** — per-app usage history.
-- **AI token usage** — totals from Claude Code, Codex and OpenCode session files on this PC.
-- **Settings import/export**, themes, edge light effects, hotkey (`Ctrl+Shift+A`) and more.
+- **File Converter** — images/PDF to JPG, PNG, PDF, ICO, BMP, GIF and TIFF.
+- **Doc Converter** — documents to PDF, DOCX, XLSX, PPTX, RTF, TXT, HTML, ODT and CSV
+  (uses LibreOffice if installed).
+- **AI token usage** — totals from local Claude Code, Codex and OpenCode sessions.
 
-## Install on another Windows PC
+## Where things are
 
-1. Download `Ayn-Setup.msi` from the Releases page (or from `Ayn-Setup.zip`).
-2. Double-click **Ayn-Setup.msi** and click through the installer. No administrator rights needed.
-3. Launch **Ayn** from the Start Menu or the desktop shortcut.
+Open **Settings** from the notch gear icon. Your features have their own sidebar pages:
+**Breaks & Meals**, **Salat Times**, **Network Guard**, **To-Do List**, **Wi-Fi QR**,
+**Pets**, plus the standard Notch and Appearance pages.
 
-There is no sign-in, trial or payment screen. The app is fully usable immediately.
-
-To uninstall, use *Settings → Apps → Ayn → Uninstall*.
-
-### Portable option
-
-Extract `Ayn-Setup.zip` and run `app\Ayn.exe`. The app is self-contained; .NET does not need
-to be installed on the target PC.
+To share Wi-Fi: Settings → **Wi-Fi QR** → **Open in notch** → choose your network →
+**Make Wi-Fi QR** → optionally **Share on LAN** (`http://<your-pc>:8787`).
 
 ## Build from source
 
@@ -49,7 +67,7 @@ dotnet build src\Ayn\Ayn.csproj -c Release
 dotnet run --project src\Ayn\Ayn.csproj
 ```
 
-Create a one-click installer:
+Build the installer:
 
 ```powershell
 dotnet tool install -g wix --version 5.0.2
@@ -58,22 +76,12 @@ powershell -File Installer\generate-files.ps1
 wix build Installer\Product.wxs Installer\Files.wxs -o Installer\Ayn-Setup.msi
 ```
 
-## Where data lives
+## Privacy and data
 
-All settings and data are stored under `%LOCALAPPDATA%\Ayn`. Nothing is uploaded.
-The only network calls are optional: city lookup for prayer times, IP area detection,
-and LAN sharing when you explicitly start it.
-
-Network Guard listens on **UDP 5354**. To protect every device on your Wi‑Fi, point your
-router's DNS at this PC and forward UDP 53 to port 5354 if your router requires the
-standard DNS port.
-
-## Project layout
-
-- `src/Ayn` — WPF application (views, services, modules, compatibility shims).
-- `src/Ayn/Extras` — Ayn-specific modules (reminders, guard, QR/Wi‑Fi, pets, to-do, tools).
-- `Installer` — WiX MSI sources and generator.
-- `AynSetup` — self-contained publish output and MSI for distribution.
+Settings and data live in `%LOCALAPPDATA%\Ayn`. Nothing is uploaded. Network requests are
+limited to optional city/IP lookup for prayer times and the LAN share you explicitly start.
+Network Guard listens on UDP 5354; point your router DNS at this PC (and forward UDP 53 to
+5354 if needed) to protect every device on the Wi-Fi.
 
 ## License
 

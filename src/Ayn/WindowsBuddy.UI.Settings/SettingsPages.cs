@@ -245,6 +245,7 @@ internal static class SettingsPages
 			"guard" => ExtrasPage(ctx, "guard"), 
 			"todo" => PersonalToolPage(ctx, "todo"), 
 			"wifi" => PersonalToolPage(ctx, "wifi"), 
+			"pets" => PersonalToolPage(ctx, "pets"), 
 
 			"license" => LicenseAndUpdatesPage(ctx), 
 			"about" => AboutPage(ctx), 
@@ -663,28 +664,6 @@ internal static class SettingsPages
 			eyeCards.SetSelection(eyes.Skin);
 		});
 		page.Children.Add(eyeCards);
-		page.Children.Add(SUI.SectionLabel("Eye emotion"));
-		ChoiceCards emotionCards = new ChoiceCards(new ChoiceCards.Option[7]
-		{
-			new ChoiceCards.Option("neutral", EyeEmotions.Title("neutral"), EyeEmotions.Tagline("neutral"), EyesSettingsPreview("ayn")),
-			new ChoiceCards.Option("happy", EyeEmotions.Title("happy"), EyeEmotions.Tagline("happy"), EyesSettingsPreview("ayn")),
-			new ChoiceCards.Option("sad", EyeEmotions.Title("sad"), EyeEmotions.Tagline("sad"), EyesSettingsPreview("ayn")),
-			new ChoiceCards.Option("cry", EyeEmotions.Title("cry"), EyeEmotions.Tagline("cry"), EyesSettingsPreview("ayn")),
-			new ChoiceCards.Option("ego", EyeEmotions.Title("ego"), EyeEmotions.Tagline("ego"), EyesSettingsPreview("ayn")),
-			new ChoiceCards.Option("surprised", EyeEmotions.Title("surprised"), EyeEmotions.Tagline("surprised"), EyesSettingsPreview("ayn")),
-			new ChoiceCards.Option("sleepy", EyeEmotions.Title("sleepy"), EyeEmotions.Tagline("sleepy"), EyesSettingsPreview("ayn"))
-		}, eyes.Emotion, "Emotion", 3);
-		emotionCards.Tag = "setting-card-eye-emotion";
-		AutomationProperties.SetName(emotionCards, "Eye emotion");
-		emotionCards.Changed += delegate(string k)
-		{
-			eyes.Emotion = k;
-		};
-		SSettingBinding.Attach(emotionCards, delegate
-		{
-			emotionCards.SetSelection(eyes.Emotion);
-		});
-		page.Children.Add(emotionCards);
 		page.Children.Add(SUI.SectionLabel("When closed, show"));
 		Grid clockStyleRow = SUI.SegmentedRow("Clock style", null, new string[2] { "Digital", "Analog" }, new string[2] { "digital", "analog" }, cfg.NotchAnalogClock ? "analog" : "digital", delegate(string k)
 		{
@@ -3171,6 +3150,11 @@ internal static class SettingsPages
 			page.Children.Add(SUI.SectionLabel("Wi-Fi QR"));
 			page.Children.Add(SUI.Note("Open the QR & Wi-Fi Share tool, pick your saved network, then press 'Make Wi-Fi QR'. Press 'Share on LAN' to let other devices scan it from http://your-pc:8787."));
 		}
+		else if (id == "pets")
+		{
+			page.Children.Add(SUI.SectionLabel("Pets"));
+			page.Children.Add(SUI.Note("Open the Pets tool in the notch to see your animated companion. Choose Ditto, Cat, Husky, Pikachu, Doraemon, Dots, Grok or Robot — all drawn locally, nothing to download."));
+		}
 		else
 		{
 			page.Children.Add(SUI.SectionLabel("To-Do List"));
@@ -3181,7 +3165,7 @@ internal static class SettingsPages
 		button.Margin = new Thickness(0, 16, 0, 0);
 		button.Click += delegate
 		{
-			CapsuleWindow.Instance?.OpenToolFromSettings(id == "wifi" ? "qr" : "todo");
+			CapsuleWindow.Instance?.OpenToolFromSettings(id == "wifi" ? "qr" : (id == "pets" ? "pets" : "todo"));
 		};
 		page.Children.Add(button);
 		return page;
