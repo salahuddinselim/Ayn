@@ -1,0 +1,40 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package Name="Ayn" Manufacturer="SabrWare" Version="1.0.0.0"
+           UpgradeCode="8C7A1E42-6D93-4F1B-9A87-2E5C4B1D0F63"
+           Scope="perUser">
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of Ayn is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+
+    <Icon Id="AynIcon" SourceFile="C:\Users\User\Desktop\Ayn\Ayn\src\Ayn\ayn-logo.ico" />
+
+    <Feature Id="Main" Title="Ayn" Level="1">
+      <ComponentGroupRef Id="AynFiles" />
+      <ComponentRef Id="StartMenuShortcut" />
+      <ComponentRef Id="DesktopShortcut" />
+    </Feature>
+
+    <Directory Id="LocalAppDataFolder">
+      <Directory Id="SabrWareFolder" Name="SabrWare">
+        <Directory Id="APPFOLDER" Name="Ayn" />
+      </Directory>
+    </Directory>
+    <Directory Id="ProgramMenuFolder">
+      <Directory Id="AynMenuFolder" Name="SabrWare" />
+    </Directory>
+
+    <Component Id="StartMenuShortcut" Guid="*">
+      <Shortcut Id="AynStart" Directory="AynMenuFolder" Name="Ayn"
+                Target="[APPFOLDER]Ayn.exe" WorkingDirectory="APPFOLDER"
+                Icon="AynIcon" />
+      <RegistryValue Root="HKCU" Key="Software\SabrWare\Ayn" Name="StartMenu" Type="integer" Value="1" KeyPath="yes" />
+    </Component>
+
+    <Component Id="DesktopShortcut" Guid="*">
+      <Shortcut Id="AynDesktop" Directory="DesktopFolder" Name="Ayn"
+                Target="[APPFOLDER]Ayn.exe" WorkingDirectory="APPFOLDER"
+                Icon="AynIcon" />
+      <RegistryValue Root="HKCU" Key="Software\SabrWare\Ayn" Name="Desktop" Type="integer" Value="1" KeyPath="yes" />
+    </Component>
+  </Package>
+</Wix>

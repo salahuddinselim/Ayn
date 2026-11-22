@@ -1,0 +1,1928 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Fragment>
+    <DirectoryRef Id="APPFOLDER">
+    <Component Id="cmp1" Guid="*">
+      <File Id="fil1" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\Accessibility.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp2" Guid="*">
+      <File Id="fil2" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\Ayn.deps.json" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp3" Guid="*">
+      <File Id="fil3" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\Ayn.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp4" Guid="*">
+      <File Id="fil4" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\Ayn.exe" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp5" Guid="*">
+      <File Id="fil5" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\Ayn.pdb" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp6" Guid="*">
+      <File Id="fil6" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\Ayn.runtimeconfig.json" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp7" Guid="*">
+      <File Id="fil7" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\clretwrc.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp8" Guid="*">
+      <File Id="fil8" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\clrgc.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp9" Guid="*">
+      <File Id="fil9" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\clrjit.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp10" Guid="*">
+      <File Id="fil10" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\coreclr.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp11" Guid="*">
+      <File Id="fil11" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\createdump.exe" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp12" Guid="*">
+      <File Id="fil12" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\D3DCompiler_47_cor3.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp13" Guid="*">
+      <File Id="fil13" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\DirectWriteForwarder.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp14" Guid="*">
+      <File Id="fil14" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\e_sqlite3.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp15" Guid="*">
+      <File Id="fil15" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\hostfxr.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp16" Guid="*">
+      <File Id="fil16" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\hostpolicy.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp17" Guid="*">
+      <File Id="fil17" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\Microsoft.CSharp.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp18" Guid="*">
+      <File Id="fil18" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\Microsoft.Data.Sqlite.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp19" Guid="*">
+      <File Id="fil19" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\Microsoft.DiaSymReader.Native.amd64.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp20" Guid="*">
+      <File Id="fil20" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\Microsoft.VisualBasic.Core.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp21" Guid="*">
+      <File Id="fil21" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\Microsoft.VisualBasic.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp22" Guid="*">
+      <File Id="fil22" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\Microsoft.VisualBasic.Forms.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp23" Guid="*">
+      <File Id="fil23" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\Microsoft.Win32.Primitives.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp24" Guid="*">
+      <File Id="fil24" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\Microsoft.Win32.Registry.AccessControl.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp25" Guid="*">
+      <File Id="fil25" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\Microsoft.Win32.Registry.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp26" Guid="*">
+      <File Id="fil26" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\Microsoft.Win32.SystemEvents.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp27" Guid="*">
+      <File Id="fil27" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\Microsoft.Windows.SDK.NET.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp28" Guid="*">
+      <File Id="fil28" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\mscordaccore.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp29" Guid="*">
+      <File Id="fil29" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\mscordaccore_amd64_amd64_8.0.3426.52217.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp30" Guid="*">
+      <File Id="fil30" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\mscordbi.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp31" Guid="*">
+      <File Id="fil31" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\mscorlib.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp32" Guid="*">
+      <File Id="fil32" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\mscorrc.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp33" Guid="*">
+      <File Id="fil33" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\msquic.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp34" Guid="*">
+      <File Id="fil34" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\netstandard.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp35" Guid="*">
+      <File Id="fil35" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\PenImc_cor3.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp36" Guid="*">
+      <File Id="fil36" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\PresentationCore.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp37" Guid="*">
+      <File Id="fil37" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\PresentationFramework-SystemCore.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp38" Guid="*">
+      <File Id="fil38" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\PresentationFramework-SystemData.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp39" Guid="*">
+      <File Id="fil39" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\PresentationFramework-SystemDrawing.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp40" Guid="*">
+      <File Id="fil40" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\PresentationFramework-SystemXml.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp41" Guid="*">
+      <File Id="fil41" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\PresentationFramework-SystemXmlLinq.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp42" Guid="*">
+      <File Id="fil42" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\PresentationFramework.Aero.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp43" Guid="*">
+      <File Id="fil43" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\PresentationFramework.Aero2.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp44" Guid="*">
+      <File Id="fil44" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\PresentationFramework.AeroLite.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp45" Guid="*">
+      <File Id="fil45" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\PresentationFramework.Classic.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp46" Guid="*">
+      <File Id="fil46" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\PresentationFramework.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp47" Guid="*">
+      <File Id="fil47" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\PresentationFramework.Luna.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp48" Guid="*">
+      <File Id="fil48" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\PresentationFramework.Royale.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp49" Guid="*">
+      <File Id="fil49" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\PresentationNative_cor3.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp50" Guid="*">
+      <File Id="fil50" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\PresentationUI.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp51" Guid="*">
+      <File Id="fil51" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\QRCoder.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp52" Guid="*">
+      <File Id="fil52" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ReachFramework.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp53" Guid="*">
+      <File Id="fil53" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\SQLitePCLRaw.batteries_v2.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp54" Guid="*">
+      <File Id="fil54" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\SQLitePCLRaw.core.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp55" Guid="*">
+      <File Id="fil55" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\SQLitePCLRaw.provider.e_sqlite3.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp56" Guid="*">
+      <File Id="fil56" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.AppContext.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp57" Guid="*">
+      <File Id="fil57" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Buffers.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp58" Guid="*">
+      <File Id="fil58" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.CodeDom.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp59" Guid="*">
+      <File Id="fil59" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Collections.Concurrent.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp60" Guid="*">
+      <File Id="fil60" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Collections.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp61" Guid="*">
+      <File Id="fil61" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Collections.Immutable.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp62" Guid="*">
+      <File Id="fil62" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Collections.NonGeneric.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp63" Guid="*">
+      <File Id="fil63" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Collections.Specialized.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp64" Guid="*">
+      <File Id="fil64" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.ComponentModel.Annotations.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp65" Guid="*">
+      <File Id="fil65" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.ComponentModel.DataAnnotations.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp66" Guid="*">
+      <File Id="fil66" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.ComponentModel.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp67" Guid="*">
+      <File Id="fil67" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.ComponentModel.EventBasedAsync.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp68" Guid="*">
+      <File Id="fil68" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.ComponentModel.Primitives.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp69" Guid="*">
+      <File Id="fil69" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.ComponentModel.TypeConverter.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp70" Guid="*">
+      <File Id="fil70" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Configuration.ConfigurationManager.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp71" Guid="*">
+      <File Id="fil71" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Configuration.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp72" Guid="*">
+      <File Id="fil72" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Console.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp73" Guid="*">
+      <File Id="fil73" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Core.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp74" Guid="*">
+      <File Id="fil74" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Data.Common.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp75" Guid="*">
+      <File Id="fil75" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Data.DataSetExtensions.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp76" Guid="*">
+      <File Id="fil76" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Data.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp77" Guid="*">
+      <File Id="fil77" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Design.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp78" Guid="*">
+      <File Id="fil78" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Diagnostics.Contracts.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp79" Guid="*">
+      <File Id="fil79" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Diagnostics.Debug.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp80" Guid="*">
+      <File Id="fil80" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Diagnostics.DiagnosticSource.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp81" Guid="*">
+      <File Id="fil81" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Diagnostics.EventLog.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp82" Guid="*">
+      <File Id="fil82" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Diagnostics.EventLog.Messages.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp83" Guid="*">
+      <File Id="fil83" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Diagnostics.FileVersionInfo.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp84" Guid="*">
+      <File Id="fil84" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Diagnostics.PerformanceCounter.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp85" Guid="*">
+      <File Id="fil85" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Diagnostics.Process.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp86" Guid="*">
+      <File Id="fil86" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Diagnostics.StackTrace.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp87" Guid="*">
+      <File Id="fil87" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Diagnostics.TextWriterTraceListener.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp88" Guid="*">
+      <File Id="fil88" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Diagnostics.Tools.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp89" Guid="*">
+      <File Id="fil89" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Diagnostics.TraceSource.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp90" Guid="*">
+      <File Id="fil90" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Diagnostics.Tracing.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp91" Guid="*">
+      <File Id="fil91" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.DirectoryServices.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp92" Guid="*">
+      <File Id="fil92" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp93" Guid="*">
+      <File Id="fil93" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Drawing.Common.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp94" Guid="*">
+      <File Id="fil94" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Drawing.Design.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp95" Guid="*">
+      <File Id="fil95" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Drawing.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp96" Guid="*">
+      <File Id="fil96" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Drawing.Primitives.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp97" Guid="*">
+      <File Id="fil97" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Dynamic.Runtime.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp98" Guid="*">
+      <File Id="fil98" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Formats.Asn1.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp99" Guid="*">
+      <File Id="fil99" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Formats.Tar.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp100" Guid="*">
+      <File Id="fil100" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Globalization.Calendars.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp101" Guid="*">
+      <File Id="fil101" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Globalization.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp102" Guid="*">
+      <File Id="fil102" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Globalization.Extensions.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp103" Guid="*">
+      <File Id="fil103" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.IO.Compression.Brotli.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp104" Guid="*">
+      <File Id="fil104" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.IO.Compression.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp105" Guid="*">
+      <File Id="fil105" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.IO.Compression.FileSystem.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp106" Guid="*">
+      <File Id="fil106" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.IO.Compression.Native.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp107" Guid="*">
+      <File Id="fil107" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.IO.Compression.ZipFile.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp108" Guid="*">
+      <File Id="fil108" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.IO.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp109" Guid="*">
+      <File Id="fil109" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.IO.FileSystem.AccessControl.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp110" Guid="*">
+      <File Id="fil110" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.IO.FileSystem.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp111" Guid="*">
+      <File Id="fil111" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.IO.FileSystem.DriveInfo.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp112" Guid="*">
+      <File Id="fil112" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.IO.FileSystem.Primitives.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp113" Guid="*">
+      <File Id="fil113" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.IO.FileSystem.Watcher.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp114" Guid="*">
+      <File Id="fil114" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.IO.IsolatedStorage.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp115" Guid="*">
+      <File Id="fil115" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.IO.MemoryMappedFiles.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp116" Guid="*">
+      <File Id="fil116" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.IO.Packaging.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp117" Guid="*">
+      <File Id="fil117" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.IO.Pipes.AccessControl.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp118" Guid="*">
+      <File Id="fil118" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.IO.Pipes.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp119" Guid="*">
+      <File Id="fil119" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.IO.UnmanagedMemoryStream.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp120" Guid="*">
+      <File Id="fil120" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Linq.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp121" Guid="*">
+      <File Id="fil121" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Linq.Expressions.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp122" Guid="*">
+      <File Id="fil122" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Linq.Parallel.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp123" Guid="*">
+      <File Id="fil123" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Linq.Queryable.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp124" Guid="*">
+      <File Id="fil124" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Management.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp125" Guid="*">
+      <File Id="fil125" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Memory.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp126" Guid="*">
+      <File Id="fil126" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Net.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp127" Guid="*">
+      <File Id="fil127" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Net.Http.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp128" Guid="*">
+      <File Id="fil128" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Net.Http.Json.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp129" Guid="*">
+      <File Id="fil129" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Net.HttpListener.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp130" Guid="*">
+      <File Id="fil130" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Net.Mail.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp131" Guid="*">
+      <File Id="fil131" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Net.NameResolution.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp132" Guid="*">
+      <File Id="fil132" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Net.NetworkInformation.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp133" Guid="*">
+      <File Id="fil133" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Net.Ping.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp134" Guid="*">
+      <File Id="fil134" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Net.Primitives.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp135" Guid="*">
+      <File Id="fil135" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Net.Quic.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp136" Guid="*">
+      <File Id="fil136" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Net.Requests.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp137" Guid="*">
+      <File Id="fil137" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Net.Security.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp138" Guid="*">
+      <File Id="fil138" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Net.ServicePoint.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp139" Guid="*">
+      <File Id="fil139" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Net.Sockets.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp140" Guid="*">
+      <File Id="fil140" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Net.WebClient.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp141" Guid="*">
+      <File Id="fil141" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Net.WebHeaderCollection.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp142" Guid="*">
+      <File Id="fil142" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Net.WebProxy.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp143" Guid="*">
+      <File Id="fil143" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Net.WebSockets.Client.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp144" Guid="*">
+      <File Id="fil144" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Net.WebSockets.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp145" Guid="*">
+      <File Id="fil145" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Numerics.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp146" Guid="*">
+      <File Id="fil146" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Numerics.Vectors.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp147" Guid="*">
+      <File Id="fil147" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.ObjectModel.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp148" Guid="*">
+      <File Id="fil148" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Printing.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp149" Guid="*">
+      <File Id="fil149" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Private.CoreLib.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp150" Guid="*">
+      <File Id="fil150" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Private.DataContractSerialization.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp151" Guid="*">
+      <File Id="fil151" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Private.Uri.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp152" Guid="*">
+      <File Id="fil152" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Private.Xml.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp153" Guid="*">
+      <File Id="fil153" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Private.Xml.Linq.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp154" Guid="*">
+      <File Id="fil154" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Reflection.DispatchProxy.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp155" Guid="*">
+      <File Id="fil155" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Reflection.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp156" Guid="*">
+      <File Id="fil156" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Reflection.Emit.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp157" Guid="*">
+      <File Id="fil157" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Reflection.Emit.ILGeneration.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp158" Guid="*">
+      <File Id="fil158" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Reflection.Emit.Lightweight.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp159" Guid="*">
+      <File Id="fil159" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Reflection.Extensions.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp160" Guid="*">
+      <File Id="fil160" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Reflection.Metadata.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp161" Guid="*">
+      <File Id="fil161" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Reflection.Primitives.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp162" Guid="*">
+      <File Id="fil162" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Reflection.TypeExtensions.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp163" Guid="*">
+      <File Id="fil163" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Resources.Extensions.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp164" Guid="*">
+      <File Id="fil164" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Resources.Reader.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp165" Guid="*">
+      <File Id="fil165" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Resources.ResourceManager.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp166" Guid="*">
+      <File Id="fil166" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Resources.Writer.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp167" Guid="*">
+      <File Id="fil167" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Runtime.CompilerServices.Unsafe.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp168" Guid="*">
+      <File Id="fil168" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Runtime.CompilerServices.VisualC.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp169" Guid="*">
+      <File Id="fil169" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Runtime.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp170" Guid="*">
+      <File Id="fil170" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Runtime.Extensions.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp171" Guid="*">
+      <File Id="fil171" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Runtime.Handles.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp172" Guid="*">
+      <File Id="fil172" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Runtime.InteropServices.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp173" Guid="*">
+      <File Id="fil173" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Runtime.InteropServices.JavaScript.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp174" Guid="*">
+      <File Id="fil174" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Runtime.InteropServices.RuntimeInformation.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp175" Guid="*">
+      <File Id="fil175" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Runtime.Intrinsics.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp176" Guid="*">
+      <File Id="fil176" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Runtime.Loader.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp177" Guid="*">
+      <File Id="fil177" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Runtime.Numerics.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp178" Guid="*">
+      <File Id="fil178" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Runtime.Serialization.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp179" Guid="*">
+      <File Id="fil179" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Runtime.Serialization.Formatters.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp180" Guid="*">
+      <File Id="fil180" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Runtime.Serialization.Json.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp181" Guid="*">
+      <File Id="fil181" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Runtime.Serialization.Primitives.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp182" Guid="*">
+      <File Id="fil182" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Runtime.Serialization.Xml.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp183" Guid="*">
+      <File Id="fil183" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Security.AccessControl.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp184" Guid="*">
+      <File Id="fil184" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Security.Claims.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp185" Guid="*">
+      <File Id="fil185" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Security.Cryptography.Algorithms.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp186" Guid="*">
+      <File Id="fil186" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Security.Cryptography.Cng.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp187" Guid="*">
+      <File Id="fil187" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Security.Cryptography.Csp.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp188" Guid="*">
+      <File Id="fil188" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Security.Cryptography.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp189" Guid="*">
+      <File Id="fil189" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Security.Cryptography.Encoding.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp190" Guid="*">
+      <File Id="fil190" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Security.Cryptography.OpenSsl.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp191" Guid="*">
+      <File Id="fil191" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Security.Cryptography.Pkcs.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp192" Guid="*">
+      <File Id="fil192" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Security.Cryptography.Primitives.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp193" Guid="*">
+      <File Id="fil193" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Security.Cryptography.ProtectedData.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp194" Guid="*">
+      <File Id="fil194" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Security.Cryptography.X509Certificates.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp195" Guid="*">
+      <File Id="fil195" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Security.Cryptography.Xml.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp196" Guid="*">
+      <File Id="fil196" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Security.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp197" Guid="*">
+      <File Id="fil197" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Security.Permissions.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp198" Guid="*">
+      <File Id="fil198" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Security.Principal.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp199" Guid="*">
+      <File Id="fil199" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Security.Principal.Windows.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp200" Guid="*">
+      <File Id="fil200" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Security.SecureString.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp201" Guid="*">
+      <File Id="fil201" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.ServiceModel.Web.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp202" Guid="*">
+      <File Id="fil202" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.ServiceProcess.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp203" Guid="*">
+      <File Id="fil203" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Text.Encoding.CodePages.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp204" Guid="*">
+      <File Id="fil204" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Text.Encoding.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp205" Guid="*">
+      <File Id="fil205" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Text.Encoding.Extensions.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp206" Guid="*">
+      <File Id="fil206" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Text.Encodings.Web.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp207" Guid="*">
+      <File Id="fil207" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Text.Json.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp208" Guid="*">
+      <File Id="fil208" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Text.RegularExpressions.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp209" Guid="*">
+      <File Id="fil209" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Threading.AccessControl.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp210" Guid="*">
+      <File Id="fil210" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Threading.Channels.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp211" Guid="*">
+      <File Id="fil211" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Threading.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp212" Guid="*">
+      <File Id="fil212" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Threading.Overlapped.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp213" Guid="*">
+      <File Id="fil213" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Threading.Tasks.Dataflow.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp214" Guid="*">
+      <File Id="fil214" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Threading.Tasks.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp215" Guid="*">
+      <File Id="fil215" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Threading.Tasks.Extensions.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp216" Guid="*">
+      <File Id="fil216" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Threading.Tasks.Parallel.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp217" Guid="*">
+      <File Id="fil217" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Threading.Thread.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp218" Guid="*">
+      <File Id="fil218" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Threading.ThreadPool.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp219" Guid="*">
+      <File Id="fil219" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Threading.Timer.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp220" Guid="*">
+      <File Id="fil220" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Transactions.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp221" Guid="*">
+      <File Id="fil221" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Transactions.Local.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp222" Guid="*">
+      <File Id="fil222" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.ValueTuple.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp223" Guid="*">
+      <File Id="fil223" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Web.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp224" Guid="*">
+      <File Id="fil224" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Web.HttpUtility.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp225" Guid="*">
+      <File Id="fil225" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Windows.Controls.Ribbon.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp226" Guid="*">
+      <File Id="fil226" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Windows.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp227" Guid="*">
+      <File Id="fil227" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Windows.Extensions.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp228" Guid="*">
+      <File Id="fil228" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Windows.Forms.Design.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp229" Guid="*">
+      <File Id="fil229" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Windows.Forms.Design.Editors.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp230" Guid="*">
+      <File Id="fil230" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Windows.Forms.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp231" Guid="*">
+      <File Id="fil231" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Windows.Forms.Primitives.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp232" Guid="*">
+      <File Id="fil232" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Windows.Input.Manipulations.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp233" Guid="*">
+      <File Id="fil233" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Windows.Presentation.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp234" Guid="*">
+      <File Id="fil234" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Xaml.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp235" Guid="*">
+      <File Id="fil235" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Xml.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp236" Guid="*">
+      <File Id="fil236" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Xml.Linq.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp237" Guid="*">
+      <File Id="fil237" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Xml.ReaderWriter.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp238" Guid="*">
+      <File Id="fil238" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Xml.Serialization.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp239" Guid="*">
+      <File Id="fil239" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Xml.XDocument.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp240" Guid="*">
+      <File Id="fil240" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Xml.XmlDocument.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp241" Guid="*">
+      <File Id="fil241" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Xml.XmlSerializer.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp242" Guid="*">
+      <File Id="fil242" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Xml.XPath.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp243" Guid="*">
+      <File Id="fil243" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\System.Xml.XPath.XDocument.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp244" Guid="*">
+      <File Id="fil244" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\UIAutomationClient.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp245" Guid="*">
+      <File Id="fil245" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\UIAutomationClientSideProviders.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp246" Guid="*">
+      <File Id="fil246" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\UIAutomationProvider.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp247" Guid="*">
+      <File Id="fil247" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\UIAutomationTypes.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp248" Guid="*">
+      <File Id="fil248" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\vcruntime140_cor3.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp249" Guid="*">
+      <File Id="fil249" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\WindowsBase.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp250" Guid="*">
+      <File Id="fil250" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\WindowsFormsIntegration.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp251" Guid="*">
+      <File Id="fil251" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\WinRT.Runtime.dll" KeyPath="yes" />
+    </Component>
+    <Component Id="cmp252" Guid="*">
+      <File Id="fil252" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\wpfgfx_cor3.dll" KeyPath="yes" />
+    </Component>
+    <Directory Id="dir252" Name="cs">
+      <Component Id="cmp254" Guid="*">
+        <File Id="fil254" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\cs\Microsoft.VisualBasic.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp255" Guid="*">
+        <File Id="fil255" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\cs\PresentationCore.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp256" Guid="*">
+        <File Id="fil256" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\cs\PresentationFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp257" Guid="*">
+        <File Id="fil257" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\cs\PresentationUI.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp258" Guid="*">
+        <File Id="fil258" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\cs\ReachFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp259" Guid="*">
+        <File Id="fil259" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\cs\System.Windows.Controls.Ribbon.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp260" Guid="*">
+        <File Id="fil260" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\cs\System.Windows.Forms.Design.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp261" Guid="*">
+        <File Id="fil261" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\cs\System.Windows.Forms.Primitives.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp262" Guid="*">
+        <File Id="fil262" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\cs\System.Windows.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp263" Guid="*">
+        <File Id="fil263" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\cs\System.Windows.Input.Manipulations.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp264" Guid="*">
+        <File Id="fil264" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\cs\System.Xaml.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp265" Guid="*">
+        <File Id="fil265" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\cs\UIAutomationClient.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp266" Guid="*">
+        <File Id="fil266" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\cs\UIAutomationClientSideProviders.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp267" Guid="*">
+        <File Id="fil267" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\cs\UIAutomationProvider.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp268" Guid="*">
+        <File Id="fil268" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\cs\UIAutomationTypes.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp269" Guid="*">
+        <File Id="fil269" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\cs\WindowsBase.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp270" Guid="*">
+        <File Id="fil270" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\cs\WindowsFormsIntegration.resources.dll" KeyPath="yes" />
+      </Component>
+    </Directory>
+    <Directory Id="dir270" Name="de">
+      <Component Id="cmp272" Guid="*">
+        <File Id="fil272" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\de\Microsoft.VisualBasic.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp273" Guid="*">
+        <File Id="fil273" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\de\PresentationCore.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp274" Guid="*">
+        <File Id="fil274" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\de\PresentationFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp275" Guid="*">
+        <File Id="fil275" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\de\PresentationUI.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp276" Guid="*">
+        <File Id="fil276" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\de\ReachFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp277" Guid="*">
+        <File Id="fil277" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\de\System.Windows.Controls.Ribbon.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp278" Guid="*">
+        <File Id="fil278" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\de\System.Windows.Forms.Design.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp279" Guid="*">
+        <File Id="fil279" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\de\System.Windows.Forms.Primitives.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp280" Guid="*">
+        <File Id="fil280" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\de\System.Windows.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp281" Guid="*">
+        <File Id="fil281" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\de\System.Windows.Input.Manipulations.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp282" Guid="*">
+        <File Id="fil282" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\de\System.Xaml.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp283" Guid="*">
+        <File Id="fil283" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\de\UIAutomationClient.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp284" Guid="*">
+        <File Id="fil284" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\de\UIAutomationClientSideProviders.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp285" Guid="*">
+        <File Id="fil285" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\de\UIAutomationProvider.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp286" Guid="*">
+        <File Id="fil286" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\de\UIAutomationTypes.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp287" Guid="*">
+        <File Id="fil287" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\de\WindowsBase.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp288" Guid="*">
+        <File Id="fil288" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\de\WindowsFormsIntegration.resources.dll" KeyPath="yes" />
+      </Component>
+    </Directory>
+    <Directory Id="dir288" Name="es">
+      <Component Id="cmp290" Guid="*">
+        <File Id="fil290" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\es\Microsoft.VisualBasic.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp291" Guid="*">
+        <File Id="fil291" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\es\PresentationCore.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp292" Guid="*">
+        <File Id="fil292" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\es\PresentationFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp293" Guid="*">
+        <File Id="fil293" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\es\PresentationUI.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp294" Guid="*">
+        <File Id="fil294" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\es\ReachFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp295" Guid="*">
+        <File Id="fil295" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\es\System.Windows.Controls.Ribbon.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp296" Guid="*">
+        <File Id="fil296" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\es\System.Windows.Forms.Design.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp297" Guid="*">
+        <File Id="fil297" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\es\System.Windows.Forms.Primitives.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp298" Guid="*">
+        <File Id="fil298" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\es\System.Windows.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp299" Guid="*">
+        <File Id="fil299" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\es\System.Windows.Input.Manipulations.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp300" Guid="*">
+        <File Id="fil300" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\es\System.Xaml.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp301" Guid="*">
+        <File Id="fil301" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\es\UIAutomationClient.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp302" Guid="*">
+        <File Id="fil302" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\es\UIAutomationClientSideProviders.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp303" Guid="*">
+        <File Id="fil303" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\es\UIAutomationProvider.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp304" Guid="*">
+        <File Id="fil304" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\es\UIAutomationTypes.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp305" Guid="*">
+        <File Id="fil305" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\es\WindowsBase.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp306" Guid="*">
+        <File Id="fil306" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\es\WindowsFormsIntegration.resources.dll" KeyPath="yes" />
+      </Component>
+    </Directory>
+    <Directory Id="dir306" Name="fr">
+      <Component Id="cmp308" Guid="*">
+        <File Id="fil308" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\fr\Microsoft.VisualBasic.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp309" Guid="*">
+        <File Id="fil309" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\fr\PresentationCore.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp310" Guid="*">
+        <File Id="fil310" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\fr\PresentationFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp311" Guid="*">
+        <File Id="fil311" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\fr\PresentationUI.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp312" Guid="*">
+        <File Id="fil312" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\fr\ReachFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp313" Guid="*">
+        <File Id="fil313" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\fr\System.Windows.Controls.Ribbon.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp314" Guid="*">
+        <File Id="fil314" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\fr\System.Windows.Forms.Design.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp315" Guid="*">
+        <File Id="fil315" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\fr\System.Windows.Forms.Primitives.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp316" Guid="*">
+        <File Id="fil316" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\fr\System.Windows.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp317" Guid="*">
+        <File Id="fil317" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\fr\System.Windows.Input.Manipulations.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp318" Guid="*">
+        <File Id="fil318" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\fr\System.Xaml.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp319" Guid="*">
+        <File Id="fil319" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\fr\UIAutomationClient.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp320" Guid="*">
+        <File Id="fil320" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\fr\UIAutomationClientSideProviders.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp321" Guid="*">
+        <File Id="fil321" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\fr\UIAutomationProvider.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp322" Guid="*">
+        <File Id="fil322" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\fr\UIAutomationTypes.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp323" Guid="*">
+        <File Id="fil323" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\fr\WindowsBase.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp324" Guid="*">
+        <File Id="fil324" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\fr\WindowsFormsIntegration.resources.dll" KeyPath="yes" />
+      </Component>
+    </Directory>
+    <Directory Id="dir324" Name="it">
+      <Component Id="cmp326" Guid="*">
+        <File Id="fil326" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\it\Microsoft.VisualBasic.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp327" Guid="*">
+        <File Id="fil327" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\it\PresentationCore.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp328" Guid="*">
+        <File Id="fil328" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\it\PresentationFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp329" Guid="*">
+        <File Id="fil329" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\it\PresentationUI.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp330" Guid="*">
+        <File Id="fil330" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\it\ReachFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp331" Guid="*">
+        <File Id="fil331" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\it\System.Windows.Controls.Ribbon.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp332" Guid="*">
+        <File Id="fil332" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\it\System.Windows.Forms.Design.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp333" Guid="*">
+        <File Id="fil333" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\it\System.Windows.Forms.Primitives.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp334" Guid="*">
+        <File Id="fil334" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\it\System.Windows.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp335" Guid="*">
+        <File Id="fil335" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\it\System.Windows.Input.Manipulations.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp336" Guid="*">
+        <File Id="fil336" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\it\System.Xaml.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp337" Guid="*">
+        <File Id="fil337" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\it\UIAutomationClient.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp338" Guid="*">
+        <File Id="fil338" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\it\UIAutomationClientSideProviders.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp339" Guid="*">
+        <File Id="fil339" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\it\UIAutomationProvider.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp340" Guid="*">
+        <File Id="fil340" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\it\UIAutomationTypes.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp341" Guid="*">
+        <File Id="fil341" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\it\WindowsBase.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp342" Guid="*">
+        <File Id="fil342" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\it\WindowsFormsIntegration.resources.dll" KeyPath="yes" />
+      </Component>
+    </Directory>
+    <Directory Id="dir342" Name="ja">
+      <Component Id="cmp344" Guid="*">
+        <File Id="fil344" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ja\Microsoft.VisualBasic.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp345" Guid="*">
+        <File Id="fil345" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ja\PresentationCore.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp346" Guid="*">
+        <File Id="fil346" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ja\PresentationFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp347" Guid="*">
+        <File Id="fil347" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ja\PresentationUI.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp348" Guid="*">
+        <File Id="fil348" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ja\ReachFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp349" Guid="*">
+        <File Id="fil349" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ja\System.Windows.Controls.Ribbon.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp350" Guid="*">
+        <File Id="fil350" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ja\System.Windows.Forms.Design.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp351" Guid="*">
+        <File Id="fil351" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ja\System.Windows.Forms.Primitives.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp352" Guid="*">
+        <File Id="fil352" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ja\System.Windows.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp353" Guid="*">
+        <File Id="fil353" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ja\System.Windows.Input.Manipulations.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp354" Guid="*">
+        <File Id="fil354" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ja\System.Xaml.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp355" Guid="*">
+        <File Id="fil355" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ja\UIAutomationClient.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp356" Guid="*">
+        <File Id="fil356" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ja\UIAutomationClientSideProviders.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp357" Guid="*">
+        <File Id="fil357" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ja\UIAutomationProvider.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp358" Guid="*">
+        <File Id="fil358" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ja\UIAutomationTypes.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp359" Guid="*">
+        <File Id="fil359" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ja\WindowsBase.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp360" Guid="*">
+        <File Id="fil360" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ja\WindowsFormsIntegration.resources.dll" KeyPath="yes" />
+      </Component>
+    </Directory>
+    <Directory Id="dir360" Name="ko">
+      <Component Id="cmp362" Guid="*">
+        <File Id="fil362" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ko\Microsoft.VisualBasic.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp363" Guid="*">
+        <File Id="fil363" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ko\PresentationCore.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp364" Guid="*">
+        <File Id="fil364" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ko\PresentationFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp365" Guid="*">
+        <File Id="fil365" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ko\PresentationUI.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp366" Guid="*">
+        <File Id="fil366" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ko\ReachFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp367" Guid="*">
+        <File Id="fil367" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ko\System.Windows.Controls.Ribbon.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp368" Guid="*">
+        <File Id="fil368" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ko\System.Windows.Forms.Design.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp369" Guid="*">
+        <File Id="fil369" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ko\System.Windows.Forms.Primitives.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp370" Guid="*">
+        <File Id="fil370" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ko\System.Windows.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp371" Guid="*">
+        <File Id="fil371" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ko\System.Windows.Input.Manipulations.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp372" Guid="*">
+        <File Id="fil372" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ko\System.Xaml.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp373" Guid="*">
+        <File Id="fil373" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ko\UIAutomationClient.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp374" Guid="*">
+        <File Id="fil374" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ko\UIAutomationClientSideProviders.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp375" Guid="*">
+        <File Id="fil375" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ko\UIAutomationProvider.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp376" Guid="*">
+        <File Id="fil376" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ko\UIAutomationTypes.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp377" Guid="*">
+        <File Id="fil377" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ko\WindowsBase.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp378" Guid="*">
+        <File Id="fil378" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ko\WindowsFormsIntegration.resources.dll" KeyPath="yes" />
+      </Component>
+    </Directory>
+    <Directory Id="dir378" Name="pl">
+      <Component Id="cmp380" Guid="*">
+        <File Id="fil380" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pl\Microsoft.VisualBasic.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp381" Guid="*">
+        <File Id="fil381" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pl\PresentationCore.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp382" Guid="*">
+        <File Id="fil382" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pl\PresentationFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp383" Guid="*">
+        <File Id="fil383" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pl\PresentationUI.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp384" Guid="*">
+        <File Id="fil384" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pl\ReachFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp385" Guid="*">
+        <File Id="fil385" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pl\System.Windows.Controls.Ribbon.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp386" Guid="*">
+        <File Id="fil386" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pl\System.Windows.Forms.Design.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp387" Guid="*">
+        <File Id="fil387" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pl\System.Windows.Forms.Primitives.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp388" Guid="*">
+        <File Id="fil388" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pl\System.Windows.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp389" Guid="*">
+        <File Id="fil389" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pl\System.Windows.Input.Manipulations.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp390" Guid="*">
+        <File Id="fil390" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pl\System.Xaml.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp391" Guid="*">
+        <File Id="fil391" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pl\UIAutomationClient.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp392" Guid="*">
+        <File Id="fil392" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pl\UIAutomationClientSideProviders.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp393" Guid="*">
+        <File Id="fil393" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pl\UIAutomationProvider.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp394" Guid="*">
+        <File Id="fil394" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pl\UIAutomationTypes.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp395" Guid="*">
+        <File Id="fil395" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pl\WindowsBase.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp396" Guid="*">
+        <File Id="fil396" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pl\WindowsFormsIntegration.resources.dll" KeyPath="yes" />
+      </Component>
+    </Directory>
+    <Directory Id="dir396" Name="pt-BR">
+      <Component Id="cmp398" Guid="*">
+        <File Id="fil398" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pt-BR\Microsoft.VisualBasic.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp399" Guid="*">
+        <File Id="fil399" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pt-BR\PresentationCore.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp400" Guid="*">
+        <File Id="fil400" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pt-BR\PresentationFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp401" Guid="*">
+        <File Id="fil401" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pt-BR\PresentationUI.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp402" Guid="*">
+        <File Id="fil402" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pt-BR\ReachFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp403" Guid="*">
+        <File Id="fil403" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pt-BR\System.Windows.Controls.Ribbon.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp404" Guid="*">
+        <File Id="fil404" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pt-BR\System.Windows.Forms.Design.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp405" Guid="*">
+        <File Id="fil405" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pt-BR\System.Windows.Forms.Primitives.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp406" Guid="*">
+        <File Id="fil406" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pt-BR\System.Windows.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp407" Guid="*">
+        <File Id="fil407" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pt-BR\System.Windows.Input.Manipulations.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp408" Guid="*">
+        <File Id="fil408" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pt-BR\System.Xaml.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp409" Guid="*">
+        <File Id="fil409" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pt-BR\UIAutomationClient.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp410" Guid="*">
+        <File Id="fil410" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pt-BR\UIAutomationClientSideProviders.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp411" Guid="*">
+        <File Id="fil411" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pt-BR\UIAutomationProvider.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp412" Guid="*">
+        <File Id="fil412" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pt-BR\UIAutomationTypes.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp413" Guid="*">
+        <File Id="fil413" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pt-BR\WindowsBase.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp414" Guid="*">
+        <File Id="fil414" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\pt-BR\WindowsFormsIntegration.resources.dll" KeyPath="yes" />
+      </Component>
+    </Directory>
+    <Directory Id="dir414" Name="ru">
+      <Component Id="cmp416" Guid="*">
+        <File Id="fil416" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ru\Microsoft.VisualBasic.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp417" Guid="*">
+        <File Id="fil417" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ru\PresentationCore.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp418" Guid="*">
+        <File Id="fil418" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ru\PresentationFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp419" Guid="*">
+        <File Id="fil419" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ru\PresentationUI.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp420" Guid="*">
+        <File Id="fil420" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ru\ReachFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp421" Guid="*">
+        <File Id="fil421" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ru\System.Windows.Controls.Ribbon.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp422" Guid="*">
+        <File Id="fil422" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ru\System.Windows.Forms.Design.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp423" Guid="*">
+        <File Id="fil423" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ru\System.Windows.Forms.Primitives.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp424" Guid="*">
+        <File Id="fil424" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ru\System.Windows.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp425" Guid="*">
+        <File Id="fil425" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ru\System.Windows.Input.Manipulations.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp426" Guid="*">
+        <File Id="fil426" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ru\System.Xaml.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp427" Guid="*">
+        <File Id="fil427" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ru\UIAutomationClient.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp428" Guid="*">
+        <File Id="fil428" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ru\UIAutomationClientSideProviders.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp429" Guid="*">
+        <File Id="fil429" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ru\UIAutomationProvider.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp430" Guid="*">
+        <File Id="fil430" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ru\UIAutomationTypes.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp431" Guid="*">
+        <File Id="fil431" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ru\WindowsBase.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp432" Guid="*">
+        <File Id="fil432" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\ru\WindowsFormsIntegration.resources.dll" KeyPath="yes" />
+      </Component>
+    </Directory>
+    <Directory Id="dir432" Name="tr">
+      <Component Id="cmp434" Guid="*">
+        <File Id="fil434" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\tr\Microsoft.VisualBasic.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp435" Guid="*">
+        <File Id="fil435" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\tr\PresentationCore.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp436" Guid="*">
+        <File Id="fil436" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\tr\PresentationFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp437" Guid="*">
+        <File Id="fil437" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\tr\PresentationUI.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp438" Guid="*">
+        <File Id="fil438" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\tr\ReachFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp439" Guid="*">
+        <File Id="fil439" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\tr\System.Windows.Controls.Ribbon.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp440" Guid="*">
+        <File Id="fil440" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\tr\System.Windows.Forms.Design.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp441" Guid="*">
+        <File Id="fil441" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\tr\System.Windows.Forms.Primitives.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp442" Guid="*">
+        <File Id="fil442" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\tr\System.Windows.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp443" Guid="*">
+        <File Id="fil443" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\tr\System.Windows.Input.Manipulations.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp444" Guid="*">
+        <File Id="fil444" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\tr\System.Xaml.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp445" Guid="*">
+        <File Id="fil445" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\tr\UIAutomationClient.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp446" Guid="*">
+        <File Id="fil446" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\tr\UIAutomationClientSideProviders.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp447" Guid="*">
+        <File Id="fil447" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\tr\UIAutomationProvider.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp448" Guid="*">
+        <File Id="fil448" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\tr\UIAutomationTypes.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp449" Guid="*">
+        <File Id="fil449" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\tr\WindowsBase.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp450" Guid="*">
+        <File Id="fil450" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\tr\WindowsFormsIntegration.resources.dll" KeyPath="yes" />
+      </Component>
+    </Directory>
+    <Directory Id="dir450" Name="zh-Hans">
+      <Component Id="cmp452" Guid="*">
+        <File Id="fil452" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hans\Microsoft.VisualBasic.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp453" Guid="*">
+        <File Id="fil453" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hans\PresentationCore.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp454" Guid="*">
+        <File Id="fil454" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hans\PresentationFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp455" Guid="*">
+        <File Id="fil455" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hans\PresentationUI.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp456" Guid="*">
+        <File Id="fil456" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hans\ReachFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp457" Guid="*">
+        <File Id="fil457" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hans\System.Windows.Controls.Ribbon.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp458" Guid="*">
+        <File Id="fil458" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hans\System.Windows.Forms.Design.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp459" Guid="*">
+        <File Id="fil459" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hans\System.Windows.Forms.Primitives.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp460" Guid="*">
+        <File Id="fil460" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hans\System.Windows.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp461" Guid="*">
+        <File Id="fil461" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hans\System.Windows.Input.Manipulations.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp462" Guid="*">
+        <File Id="fil462" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hans\System.Xaml.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp463" Guid="*">
+        <File Id="fil463" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hans\UIAutomationClient.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp464" Guid="*">
+        <File Id="fil464" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hans\UIAutomationClientSideProviders.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp465" Guid="*">
+        <File Id="fil465" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hans\UIAutomationProvider.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp466" Guid="*">
+        <File Id="fil466" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hans\UIAutomationTypes.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp467" Guid="*">
+        <File Id="fil467" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hans\WindowsBase.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp468" Guid="*">
+        <File Id="fil468" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hans\WindowsFormsIntegration.resources.dll" KeyPath="yes" />
+      </Component>
+    </Directory>
+    <Directory Id="dir468" Name="zh-Hant">
+      <Component Id="cmp470" Guid="*">
+        <File Id="fil470" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hant\Microsoft.VisualBasic.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp471" Guid="*">
+        <File Id="fil471" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hant\PresentationCore.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp472" Guid="*">
+        <File Id="fil472" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hant\PresentationFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp473" Guid="*">
+        <File Id="fil473" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hant\PresentationUI.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp474" Guid="*">
+        <File Id="fil474" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hant\ReachFramework.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp475" Guid="*">
+        <File Id="fil475" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hant\System.Windows.Controls.Ribbon.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp476" Guid="*">
+        <File Id="fil476" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hant\System.Windows.Forms.Design.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp477" Guid="*">
+        <File Id="fil477" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hant\System.Windows.Forms.Primitives.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp478" Guid="*">
+        <File Id="fil478" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hant\System.Windows.Forms.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp479" Guid="*">
+        <File Id="fil479" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hant\System.Windows.Input.Manipulations.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp480" Guid="*">
+        <File Id="fil480" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hant\System.Xaml.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp481" Guid="*">
+        <File Id="fil481" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hant\UIAutomationClient.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp482" Guid="*">
+        <File Id="fil482" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hant\UIAutomationClientSideProviders.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp483" Guid="*">
+        <File Id="fil483" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hant\UIAutomationProvider.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp484" Guid="*">
+        <File Id="fil484" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hant\UIAutomationTypes.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp485" Guid="*">
+        <File Id="fil485" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hant\WindowsBase.resources.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmp486" Guid="*">
+        <File Id="fil486" Source="C:\Users\User\Desktop\Ayn\Ayn\AynSetup\app\zh-Hant\WindowsFormsIntegration.resources.dll" KeyPath="yes" />
+      </Component>
+    </Directory>
+    </DirectoryRef>
+  </Fragment>
+  <Fragment>
+    <ComponentGroup Id="AynFiles">
+      <ComponentRef Id="cmp1" />
+      <ComponentRef Id="cmp2" />
+      <ComponentRef Id="cmp3" />
+      <ComponentRef Id="cmp4" />
+      <ComponentRef Id="cmp5" />
+      <ComponentRef Id="cmp6" />
+      <ComponentRef Id="cmp7" />
+      <ComponentRef Id="cmp8" />
+      <ComponentRef Id="cmp9" />
+      <ComponentRef Id="cmp10" />
+      <ComponentRef Id="cmp11" />
+      <ComponentRef Id="cmp12" />
+      <ComponentRef Id="cmp13" />
+      <ComponentRef Id="cmp14" />
+      <ComponentRef Id="cmp15" />
+      <ComponentRef Id="cmp16" />
+      <ComponentRef Id="cmp17" />
+      <ComponentRef Id="cmp18" />
+      <ComponentRef Id="cmp19" />
+      <ComponentRef Id="cmp20" />
+      <ComponentRef Id="cmp21" />
+      <ComponentRef Id="cmp22" />
+      <ComponentRef Id="cmp23" />
+      <ComponentRef Id="cmp24" />
+      <ComponentRef Id="cmp25" />
+      <ComponentRef Id="cmp26" />
+      <ComponentRef Id="cmp27" />
+      <ComponentRef Id="cmp28" />
+      <ComponentRef Id="cmp29" />
+      <ComponentRef Id="cmp30" />
+      <ComponentRef Id="cmp31" />
+      <ComponentRef Id="cmp32" />
+      <ComponentRef Id="cmp33" />
+      <ComponentRef Id="cmp34" />
+      <ComponentRef Id="cmp35" />
+      <ComponentRef Id="cmp36" />
+      <ComponentRef Id="cmp37" />
+      <ComponentRef Id="cmp38" />
+      <ComponentRef Id="cmp39" />
+      <ComponentRef Id="cmp40" />
+      <ComponentRef Id="cmp41" />
+      <ComponentRef Id="cmp42" />
+      <ComponentRef Id="cmp43" />
+      <ComponentRef Id="cmp44" />
+      <ComponentRef Id="cmp45" />
+      <ComponentRef Id="cmp46" />
+      <ComponentRef Id="cmp47" />
+      <ComponentRef Id="cmp48" />
+      <ComponentRef Id="cmp49" />
+      <ComponentRef Id="cmp50" />
+      <ComponentRef Id="cmp51" />
+      <ComponentRef Id="cmp52" />
+      <ComponentRef Id="cmp53" />
+      <ComponentRef Id="cmp54" />
+      <ComponentRef Id="cmp55" />
+      <ComponentRef Id="cmp56" />
+      <ComponentRef Id="cmp57" />
+      <ComponentRef Id="cmp58" />
+      <ComponentRef Id="cmp59" />
+      <ComponentRef Id="cmp60" />
+      <ComponentRef Id="cmp61" />
+      <ComponentRef Id="cmp62" />
+      <ComponentRef Id="cmp63" />
+      <ComponentRef Id="cmp64" />
+      <ComponentRef Id="cmp65" />
+      <ComponentRef Id="cmp66" />
+      <ComponentRef Id="cmp67" />
+      <ComponentRef Id="cmp68" />
+      <ComponentRef Id="cmp69" />
+      <ComponentRef Id="cmp70" />
+      <ComponentRef Id="cmp71" />
+      <ComponentRef Id="cmp72" />
+      <ComponentRef Id="cmp73" />
+      <ComponentRef Id="cmp74" />
+      <ComponentRef Id="cmp75" />
+      <ComponentRef Id="cmp76" />
+      <ComponentRef Id="cmp77" />
+      <ComponentRef Id="cmp78" />
+      <ComponentRef Id="cmp79" />
+      <ComponentRef Id="cmp80" />
+      <ComponentRef Id="cmp81" />
+      <ComponentRef Id="cmp82" />
+      <ComponentRef Id="cmp83" />
+      <ComponentRef Id="cmp84" />
+      <ComponentRef Id="cmp85" />
+      <ComponentRef Id="cmp86" />
+      <ComponentRef Id="cmp87" />
+      <ComponentRef Id="cmp88" />
+      <ComponentRef Id="cmp89" />
+      <ComponentRef Id="cmp90" />
+      <ComponentRef Id="cmp91" />
+      <ComponentRef Id="cmp92" />
+      <ComponentRef Id="cmp93" />
+      <ComponentRef Id="cmp94" />
+      <ComponentRef Id="cmp95" />
+      <ComponentRef Id="cmp96" />
+      <ComponentRef Id="cmp97" />
+      <ComponentRef Id="cmp98" />
+      <ComponentRef Id="cmp99" />
+      <ComponentRef Id="cmp100" />
+      <ComponentRef Id="cmp101" />
+      <ComponentRef Id="cmp102" />
+      <ComponentRef Id="cmp103" />
+      <ComponentRef Id="cmp104" />
+      <ComponentRef Id="cmp105" />
+      <ComponentRef Id="cmp106" />
+      <ComponentRef Id="cmp107" />
+      <ComponentRef Id="cmp108" />
+      <ComponentRef Id="cmp109" />
+      <ComponentRef Id="cmp110" />
+      <ComponentRef Id="cmp111" />
+      <ComponentRef Id="cmp112" />
+      <ComponentRef Id="cmp113" />
+      <ComponentRef Id="cmp114" />
+      <ComponentRef Id="cmp115" />
+      <ComponentRef Id="cmp116" />
+      <ComponentRef Id="cmp117" />
+      <ComponentRef Id="cmp118" />
+      <ComponentRef Id="cmp119" />
+      <ComponentRef Id="cmp120" />
+      <ComponentRef Id="cmp121" />
+      <ComponentRef Id="cmp122" />
+      <ComponentRef Id="cmp123" />
+      <ComponentRef Id="cmp124" />
+      <ComponentRef Id="cmp125" />
+      <ComponentRef Id="cmp126" />
+      <ComponentRef Id="cmp127" />
+      <ComponentRef Id="cmp128" />
+      <ComponentRef Id="cmp129" />
+      <ComponentRef Id="cmp130" />
+      <ComponentRef Id="cmp131" />
+      <ComponentRef Id="cmp132" />
+      <ComponentRef Id="cmp133" />
+      <ComponentRef Id="cmp134" />
+      <ComponentRef Id="cmp135" />
+      <ComponentRef Id="cmp136" />
+      <ComponentRef Id="cmp137" />
+      <ComponentRef Id="cmp138" />
+      <ComponentRef Id="cmp139" />
+      <ComponentRef Id="cmp140" />
+      <ComponentRef Id="cmp141" />
+      <ComponentRef Id="cmp142" />
+      <ComponentRef Id="cmp143" />
+      <ComponentRef Id="cmp144" />
+      <ComponentRef Id="cmp145" />
+      <ComponentRef Id="cmp146" />
+      <ComponentRef Id="cmp147" />
+      <ComponentRef Id="cmp148" />
+      <ComponentRef Id="cmp149" />
+      <ComponentRef Id="cmp150" />
+      <ComponentRef Id="cmp151" />
+      <ComponentRef Id="cmp152" />
+      <ComponentRef Id="cmp153" />
+      <ComponentRef Id="cmp154" />
+      <ComponentRef Id="cmp155" />
+      <ComponentRef Id="cmp156" />
+      <ComponentRef Id="cmp157" />
+      <ComponentRef Id="cmp158" />
+      <ComponentRef Id="cmp159" />
+      <ComponentRef Id="cmp160" />
+      <ComponentRef Id="cmp161" />
+      <ComponentRef Id="cmp162" />
+      <ComponentRef Id="cmp163" />
+      <ComponentRef Id="cmp164" />
+      <ComponentRef Id="cmp165" />
+      <ComponentRef Id="cmp166" />
+      <ComponentRef Id="cmp167" />
+      <ComponentRef Id="cmp168" />
+      <ComponentRef Id="cmp169" />
+      <ComponentRef Id="cmp170" />
+      <ComponentRef Id="cmp171" />
+      <ComponentRef Id="cmp172" />
+      <ComponentRef Id="cmp173" />
+      <ComponentRef Id="cmp174" />
+      <ComponentRef Id="cmp175" />
+      <ComponentRef Id="cmp176" />
+      <ComponentRef Id="cmp177" />
+      <ComponentRef Id="cmp178" />
+      <ComponentRef Id="cmp179" />
+      <ComponentRef Id="cmp180" />
+      <ComponentRef Id="cmp181" />
+      <ComponentRef Id="cmp182" />
+      <ComponentRef Id="cmp183" />
+      <ComponentRef Id="cmp184" />
+      <ComponentRef Id="cmp185" />
+      <ComponentRef Id="cmp186" />
+      <ComponentRef Id="cmp187" />
+      <ComponentRef Id="cmp188" />
+      <ComponentRef Id="cmp189" />
+      <ComponentRef Id="cmp190" />
+      <ComponentRef Id="cmp191" />
+      <ComponentRef Id="cmp192" />
+      <ComponentRef Id="cmp193" />
+      <ComponentRef Id="cmp194" />
+      <ComponentRef Id="cmp195" />
+      <ComponentRef Id="cmp196" />
+      <ComponentRef Id="cmp197" />
+      <ComponentRef Id="cmp198" />
+      <ComponentRef Id="cmp199" />
+      <ComponentRef Id="cmp200" />
+      <ComponentRef Id="cmp201" />
+      <ComponentRef Id="cmp202" />
+      <ComponentRef Id="cmp203" />
+      <ComponentRef Id="cmp204" />
+      <ComponentRef Id="cmp205" />
+      <ComponentRef Id="cmp206" />
+      <ComponentRef Id="cmp207" />
+      <ComponentRef Id="cmp208" />
+      <ComponentRef Id="cmp209" />
+      <ComponentRef Id="cmp210" />
+      <ComponentRef Id="cmp211" />
+      <ComponentRef Id="cmp212" />
+      <ComponentRef Id="cmp213" />
+      <ComponentRef Id="cmp214" />
+      <ComponentRef Id="cmp215" />
+      <ComponentRef Id="cmp216" />
+      <ComponentRef Id="cmp217" />
+      <ComponentRef Id="cmp218" />
+      <ComponentRef Id="cmp219" />
+      <ComponentRef Id="cmp220" />
+      <ComponentRef Id="cmp221" />
+      <ComponentRef Id="cmp222" />
+      <ComponentRef Id="cmp223" />
+      <ComponentRef Id="cmp224" />
+      <ComponentRef Id="cmp225" />
+      <ComponentRef Id="cmp226" />
+      <ComponentRef Id="cmp227" />
+      <ComponentRef Id="cmp228" />
+      <ComponentRef Id="cmp229" />
+      <ComponentRef Id="cmp230" />
+      <ComponentRef Id="cmp231" />
+      <ComponentRef Id="cmp232" />
+      <ComponentRef Id="cmp233" />
+      <ComponentRef Id="cmp234" />
+      <ComponentRef Id="cmp235" />
+      <ComponentRef Id="cmp236" />
+      <ComponentRef Id="cmp237" />
+      <ComponentRef Id="cmp238" />
+      <ComponentRef Id="cmp239" />
+      <ComponentRef Id="cmp240" />
+      <ComponentRef Id="cmp241" />
+      <ComponentRef Id="cmp242" />
+      <ComponentRef Id="cmp243" />
+      <ComponentRef Id="cmp244" />
+      <ComponentRef Id="cmp245" />
+      <ComponentRef Id="cmp246" />
+      <ComponentRef Id="cmp247" />
+      <ComponentRef Id="cmp248" />
+      <ComponentRef Id="cmp249" />
+      <ComponentRef Id="cmp250" />
+      <ComponentRef Id="cmp251" />
+      <ComponentRef Id="cmp252" />
+      <ComponentRef Id="cmp254" />
+      <ComponentRef Id="cmp255" />
+      <ComponentRef Id="cmp256" />
+      <ComponentRef Id="cmp257" />
+      <ComponentRef Id="cmp258" />
+      <ComponentRef Id="cmp259" />
+      <ComponentRef Id="cmp260" />
+      <ComponentRef Id="cmp261" />
+      <ComponentRef Id="cmp262" />
+      <ComponentRef Id="cmp263" />
+      <ComponentRef Id="cmp264" />
+      <ComponentRef Id="cmp265" />
+      <ComponentRef Id="cmp266" />
+      <ComponentRef Id="cmp267" />
+      <ComponentRef Id="cmp268" />
+      <ComponentRef Id="cmp269" />
+      <ComponentRef Id="cmp270" />
+      <ComponentRef Id="cmp272" />
+      <ComponentRef Id="cmp273" />
+      <ComponentRef Id="cmp274" />
+      <ComponentRef Id="cmp275" />
+      <ComponentRef Id="cmp276" />
+      <ComponentRef Id="cmp277" />
+      <ComponentRef Id="cmp278" />
+      <ComponentRef Id="cmp279" />
+      <ComponentRef Id="cmp280" />
+      <ComponentRef Id="cmp281" />
+      <ComponentRef Id="cmp282" />
+      <ComponentRef Id="cmp283" />
+      <ComponentRef Id="cmp284" />
+      <ComponentRef Id="cmp285" />
+      <ComponentRef Id="cmp286" />
+      <ComponentRef Id="cmp287" />
+      <ComponentRef Id="cmp288" />
+      <ComponentRef Id="cmp290" />
+      <ComponentRef Id="cmp291" />
+      <ComponentRef Id="cmp292" />
+      <ComponentRef Id="cmp293" />
+      <ComponentRef Id="cmp294" />
+      <ComponentRef Id="cmp295" />
+      <ComponentRef Id="cmp296" />
+      <ComponentRef Id="cmp297" />
+      <ComponentRef Id="cmp298" />
+      <ComponentRef Id="cmp299" />
+      <ComponentRef Id="cmp300" />
+      <ComponentRef Id="cmp301" />
+      <ComponentRef Id="cmp302" />
+      <ComponentRef Id="cmp303" />
+      <ComponentRef Id="cmp304" />
+      <ComponentRef Id="cmp305" />
+      <ComponentRef Id="cmp306" />
+      <ComponentRef Id="cmp308" />
+      <ComponentRef Id="cmp309" />
+      <ComponentRef Id="cmp310" />
+      <ComponentRef Id="cmp311" />
+      <ComponentRef Id="cmp312" />
+      <ComponentRef Id="cmp313" />
+      <ComponentRef Id="cmp314" />
+      <ComponentRef Id="cmp315" />
+      <ComponentRef Id="cmp316" />
+      <ComponentRef Id="cmp317" />
+      <ComponentRef Id="cmp318" />
+      <ComponentRef Id="cmp319" />
+      <ComponentRef Id="cmp320" />
+      <ComponentRef Id="cmp321" />
+      <ComponentRef Id="cmp322" />
+      <ComponentRef Id="cmp323" />
+      <ComponentRef Id="cmp324" />
+      <ComponentRef Id="cmp326" />
+      <ComponentRef Id="cmp327" />
+      <ComponentRef Id="cmp328" />
+      <ComponentRef Id="cmp329" />
+      <ComponentRef Id="cmp330" />
+      <ComponentRef Id="cmp331" />
+      <ComponentRef Id="cmp332" />
+      <ComponentRef Id="cmp333" />
+      <ComponentRef Id="cmp334" />
+      <ComponentRef Id="cmp335" />
+      <ComponentRef Id="cmp336" />
+      <ComponentRef Id="cmp337" />
+      <ComponentRef Id="cmp338" />
+      <ComponentRef Id="cmp339" />
+      <ComponentRef Id="cmp340" />
+      <ComponentRef Id="cmp341" />
+      <ComponentRef Id="cmp342" />
+      <ComponentRef Id="cmp344" />
+      <ComponentRef Id="cmp345" />
+      <ComponentRef Id="cmp346" />
+      <ComponentRef Id="cmp347" />
+      <ComponentRef Id="cmp348" />
+      <ComponentRef Id="cmp349" />
+      <ComponentRef Id="cmp350" />
+      <ComponentRef Id="cmp351" />
+      <ComponentRef Id="cmp352" />
+      <ComponentRef Id="cmp353" />
+      <ComponentRef Id="cmp354" />
+      <ComponentRef Id="cmp355" />
+      <ComponentRef Id="cmp356" />
+      <ComponentRef Id="cmp357" />
+      <ComponentRef Id="cmp358" />
+      <ComponentRef Id="cmp359" />
+      <ComponentRef Id="cmp360" />
+      <ComponentRef Id="cmp362" />
+      <ComponentRef Id="cmp363" />
+      <ComponentRef Id="cmp364" />
+      <ComponentRef Id="cmp365" />
+      <ComponentRef Id="cmp366" />
+      <ComponentRef Id="cmp367" />
+      <ComponentRef Id="cmp368" />
+      <ComponentRef Id="cmp369" />
+      <ComponentRef Id="cmp370" />
+      <ComponentRef Id="cmp371" />
+      <ComponentRef Id="cmp372" />
+      <ComponentRef Id="cmp373" />
+      <ComponentRef Id="cmp374" />
+      <ComponentRef Id="cmp375" />
+      <ComponentRef Id="cmp376" />
+      <ComponentRef Id="cmp377" />
+      <ComponentRef Id="cmp378" />
+      <ComponentRef Id="cmp380" />
+      <ComponentRef Id="cmp381" />
+      <ComponentRef Id="cmp382" />
+      <ComponentRef Id="cmp383" />
+      <ComponentRef Id="cmp384" />
+      <ComponentRef Id="cmp385" />
+      <ComponentRef Id="cmp386" />
+      <ComponentRef Id="cmp387" />
+      <ComponentRef Id="cmp388" />
+      <ComponentRef Id="cmp389" />
+      <ComponentRef Id="cmp390" />
+      <ComponentRef Id="cmp391" />
+      <ComponentRef Id="cmp392" />
+      <ComponentRef Id="cmp393" />
+      <ComponentRef Id="cmp394" />
+      <ComponentRef Id="cmp395" />
+      <ComponentRef Id="cmp396" />
+      <ComponentRef Id="cmp398" />
+      <ComponentRef Id="cmp399" />
+      <ComponentRef Id="cmp400" />
+      <ComponentRef Id="cmp401" />
+      <ComponentRef Id="cmp402" />
+      <ComponentRef Id="cmp403" />
+      <ComponentRef Id="cmp404" />
+      <ComponentRef Id="cmp405" />
+      <ComponentRef Id="cmp406" />
+      <ComponentRef Id="cmp407" />
+      <ComponentRef Id="cmp408" />
+      <ComponentRef Id="cmp409" />
+      <ComponentRef Id="cmp410" />
+      <ComponentRef Id="cmp411" />
+      <ComponentRef Id="cmp412" />
+      <ComponentRef Id="cmp413" />
+      <ComponentRef Id="cmp414" />
+      <ComponentRef Id="cmp416" />
+      <ComponentRef Id="cmp417" />
+      <ComponentRef Id="cmp418" />
+      <ComponentRef Id="cmp419" />
+      <ComponentRef Id="cmp420" />
+      <ComponentRef Id="cmp421" />
+      <ComponentRef Id="cmp422" />
+      <ComponentRef Id="cmp423" />
+      <ComponentRef Id="cmp424" />
+      <ComponentRef Id="cmp425" />
+      <ComponentRef Id="cmp426" />
+      <ComponentRef Id="cmp427" />
+      <ComponentRef Id="cmp428" />
+      <ComponentRef Id="cmp429" />
+      <ComponentRef Id="cmp430" />
+      <ComponentRef Id="cmp431" />
+      <ComponentRef Id="cmp432" />
+      <ComponentRef Id="cmp434" />
+      <ComponentRef Id="cmp435" />
+      <ComponentRef Id="cmp436" />
+      <ComponentRef Id="cmp437" />
+      <ComponentRef Id="cmp438" />
+      <ComponentRef Id="cmp439" />
+      <ComponentRef Id="cmp440" />
+      <ComponentRef Id="cmp441" />
+      <ComponentRef Id="cmp442" />
+      <ComponentRef Id="cmp443" />
+      <ComponentRef Id="cmp444" />
+      <ComponentRef Id="cmp445" />
+      <ComponentRef Id="cmp446" />
+      <ComponentRef Id="cmp447" />
+      <ComponentRef Id="cmp448" />
+      <ComponentRef Id="cmp449" />
+      <ComponentRef Id="cmp450" />
+      <ComponentRef Id="cmp452" />
+      <ComponentRef Id="cmp453" />
+      <ComponentRef Id="cmp454" />
+      <ComponentRef Id="cmp455" />
+      <ComponentRef Id="cmp456" />
+      <ComponentRef Id="cmp457" />
+      <ComponentRef Id="cmp458" />
+      <ComponentRef Id="cmp459" />
+      <ComponentRef Id="cmp460" />
+      <ComponentRef Id="cmp461" />
+      <ComponentRef Id="cmp462" />
+      <ComponentRef Id="cmp463" />
+      <ComponentRef Id="cmp464" />
+      <ComponentRef Id="cmp465" />
+      <ComponentRef Id="cmp466" />
+      <ComponentRef Id="cmp467" />
+      <ComponentRef Id="cmp468" />
+      <ComponentRef Id="cmp470" />
+      <ComponentRef Id="cmp471" />
+      <ComponentRef Id="cmp472" />
+      <ComponentRef Id="cmp473" />
+      <ComponentRef Id="cmp474" />
+      <ComponentRef Id="cmp475" />
+      <ComponentRef Id="cmp476" />
+      <ComponentRef Id="cmp477" />
+      <ComponentRef Id="cmp478" />
+      <ComponentRef Id="cmp479" />
+      <ComponentRef Id="cmp480" />
+      <ComponentRef Id="cmp481" />
+      <ComponentRef Id="cmp482" />
+      <ComponentRef Id="cmp483" />
+      <ComponentRef Id="cmp484" />
+      <ComponentRef Id="cmp485" />
+      <ComponentRef Id="cmp486" />
+    </ComponentGroup>
+  </Fragment>
+</Wix>

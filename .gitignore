@@ -1,0 +1,10 @@
+bin/
+obj/
+.vs/
+*.user
+publish/
+AynSetup/app/
+AynSetup/*.zip
+reference/
+Ayn-Setup.zip
+*.tmp
