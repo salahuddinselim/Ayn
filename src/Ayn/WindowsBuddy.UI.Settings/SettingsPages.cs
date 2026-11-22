@@ -24,6 +24,7 @@ using WindowsBuddy.BuddyCapsule.Renderer;
 using WindowsBuddy.BuddyCapsule.Theme;
 using WindowsBuddy.BuddyCapsule.UI;
 using WindowsBuddy.Extras;
+using WindowsBuddy.Tools.Personal;
 using WindowsBuddy.Core;
 using WindowsBuddy.Services;
 using WindowsBuddy.Services.Pet;
@@ -3153,7 +3154,29 @@ internal static class SettingsPages
 		else if (id == "pets")
 		{
 			page.Children.Add(SUI.SectionLabel("Pets"));
-			page.Children.Add(SUI.Note("Open the Pets tool in the notch to see your animated companion. Choose Ditto, Cat, Husky, Pikachu, Doraemon, Dots, Grok or Robot — all drawn locally, nothing to download."));
+			page.Children.Add(SUI.Note("Choose a companion below. It is drawn locally with no downloads."));
+			var pet = new CompanionPetCanvas
+			{
+				Kind = AynExtrasService.Instance.Config.PetKind,
+				HorizontalAlignment = System.Windows.HorizontalAlignment.Left,
+				Margin = new Thickness(0, 12, 0, 0)
+			};
+			page.Children.Add(pet);
+			var choices = new WrapPanel { Margin = new Thickness(0, 8, 0, 0) };
+			foreach (var kind in new[] { "ditto", "cat", "husky", "pikachu", "doraemon", "dots", "grok", "robot" })
+			{
+				var b = new SButton(char.ToUpperInvariant(kind[0]) + kind.Substring(1), SButtonKind.Secondary);
+				b.Margin = new Thickness(0, 0, 6, 6);
+				var chosen = kind;
+				b.Click += delegate
+				{
+					pet.Kind = chosen;
+					AynExtrasService.Instance.Config.PetKind = chosen;
+					AynExtrasService.Instance.Config.Save();
+				};
+				choices.Children.Add(b);
+			}
+			page.Children.Add(choices);
 		}
 		else
 		{

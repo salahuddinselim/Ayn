@@ -762,6 +762,16 @@ public class ToolRegistry
 			{
 				tool.IsEnabled = toolItemConfig.IsEnabled;
 				tool.OrderIndex = toolItemConfig.OrderIndex;
+				if (tool.Id is "pets" or "todo" or "qr")
+				{
+					tool.IsEnabled = true;
+					tool.OrderIndex = tool.Id switch
+					{
+						"todo" => 5,
+						"pets" => 6,
+						_ => 7
+					};
+				}
 			}
 			else
 			{

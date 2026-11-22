@@ -4885,6 +4885,12 @@ public class CapsuleWindow : Window, INotchSurface
 		reg.RegisterTool(new WindowsBuddy.Tools.Personal.QrWifiTool());
 		reg.RegisterTool(new WindowsBuddy.Tools.Personal.DocConvertTool());
 		reg.RegisterTool(new WindowsBuddy.Tools.Personal.TodoTool());
+		foreach (var id in new[] { "pets", "todo", "qr" })
+		{
+			var tool = reg.GetTool(id);
+			if (tool != null) { tool.IsEnabled = true; }
+		}
+		reg.SaveUserConfiguration();
 	}
 
 	private void RegisterCoreTools()
