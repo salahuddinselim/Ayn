@@ -32,8 +32,9 @@ conversion) and the .NET/WPF platform.
 - **The notch** — an always-on-top pill with two animated eyes that follow the cursor.
 - **Automatic emotions** — the eyes react on their own to time of day, battery, focus,
   idle state and activity: happy, sad, sleepy, surprised, ego and cry. No settings toggle.
-- **Pets** — Ditto, Cat, Husky, Pikachu, Doraemon, ChatGPT-style dots, Grok and Robot,
-  drawn and animated in-app with no downloads required.
+- **Companions in the notch** — replace the animated eyes with Ditto, Cat, Husky,
+  Pikachu, Doraemon, ChatGPT-style dots, Grok or Robot. Choose one in Settings → Notch
+  → "Notch companion". Everything is drawn locally; nothing to download.
 - **Home** — screen time, CPU/RAM/disk, weather, focus timer, clipboard, notes and live
   internet speed.
 - **Breaks & Meals** — a nudge after configurable computer time, plus lunch and dinner reminders.
@@ -51,7 +52,8 @@ conversion) and the .NET/WPF platform.
 
 Open **Settings** from the notch gear icon. Your features have their own sidebar pages:
 **Breaks & Meals**, **Salat Times**, **Network Guard**, **To-Do List**, **Wi-Fi QR**,
-**Pets**, plus the standard Notch and Appearance pages.
+plus the standard Notch and Appearance pages. The companion lives in the notch itself —
+choose it in **Notch → Notch companion**.
 
 To share Wi-Fi: Settings → **Wi-Fi QR** → **Open in notch** → choose your network →
 **Make Wi-Fi QR** → optionally **Share on LAN** (`http://<your-pc>:8787`).

@@ -74,6 +74,25 @@ public sealed class EyesPreferences
 		}
 	}
 
+	public string Companion
+	{
+		get
+		{
+			return NotchCompanions.Normalize(value.Companion);
+		}
+		set
+		{
+			string v = NotchCompanions.Normalize(value);
+			if (v != Companion)
+			{
+				Set(delegate(EyesOptions o)
+				{
+					o.Companion = v;
+				});
+			}
+		}
+	}
+
 	public event EventHandler Changed;
 
 	private EyesPreferences()
@@ -90,6 +109,7 @@ public sealed class EyesPreferences
 		value = eyesOptions ?? new EyesOptions();
 		value.Skin = EyeSkins.Normalize(value.Skin);
 		value.Emotion = EyeEmotions.Normalize(value.Emotion);
+		value.Companion = NotchCompanions.Normalize(value.Companion);
 	}
 
 	private void Set(Action<EyesOptions> change)

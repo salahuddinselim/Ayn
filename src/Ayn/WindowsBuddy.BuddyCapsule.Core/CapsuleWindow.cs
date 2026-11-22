@@ -44,6 +44,7 @@ using WindowsBuddy.Services.Messages;
 using WindowsBuddy.Services.Pet;
 using WindowsBuddy.Tools;
 using WindowsBuddy.Tools.AICoding;
+using WindowsBuddy.Tools.Personal;
 using WindowsBuddy.Tools.Analytics;
 using WindowsBuddy.Tools.Calendar;
 using WindowsBuddy.Tools.Clipboard;
@@ -1054,6 +1055,8 @@ public class CapsuleWindow : Window, INotchSurface
 	private DispatcherTimer _petResume;
 
 	private EyesView _eyesResting;
+
+	private CompanionPetCanvas _companionPet;
 
 	private EyesView _eyesMini;
 
@@ -4881,7 +4884,6 @@ public class CapsuleWindow : Window, INotchSurface
 		reg.RegisterTool(new WindowsBuddy.Tools.Personal.BreaksTool());
 		reg.RegisterTool(new WindowsBuddy.Tools.Personal.SalatTool());
 		reg.RegisterTool(new WindowsBuddy.Tools.Personal.GuardTool());
-		reg.RegisterTool(new WindowsBuddy.Tools.Personal.PetsTool());
 		reg.RegisterTool(new WindowsBuddy.Tools.Personal.QrWifiTool());
 		reg.RegisterTool(new WindowsBuddy.Tools.Personal.DocConvertTool());
 		reg.RegisterTool(new WindowsBuddy.Tools.Personal.TodoTool());
@@ -13294,6 +13296,30 @@ public class CapsuleWindow : Window, INotchSurface
 		return true;
 	}
 
+	private void ShowCompanionPet(string id)
+	{
+		if (_collapsedContent == null) return;
+		if (_companionPet == null)
+		{
+			_companionPet = new CompanionPetCanvas
+			{
+				Width = 92,
+				Height = 40,
+				HorizontalAlignment = System.Windows.HorizontalAlignment.Center,
+				VerticalAlignment = VerticalAlignment.Center,
+				IsHitTestVisible = false
+			};
+			_collapsedContent.Children.Add(_companionPet);
+		}
+		_companionPet.Kind = id;
+		_companionPet.Visibility = Visibility.Visible;
+	}
+
+	private void HideCompanionPet()
+	{
+		if (_companionPet != null) _companionPet.Visibility = Visibility.Collapsed;
+	}
+
 	internal void EyesRefresh()
 	{
 		if (_isShuttingDown)
@@ -13301,6 +13327,14 @@ public class CapsuleWindow : Window, INotchSurface
 			EyesTeardown("shutdown");
 			return;
 		}
+		var companion = EyesPreferences.Instance.Companion;
+		if (NotchCompanions.IsPet(companion))
+		{
+			EyesTeardown("companion");
+			ShowCompanionPet(companion);
+			return;
+		}
+		HideCompanionPet();
 		if (!EyesPreferences.Instance.Enabled)
 		{
 			EyesTeardown("off");

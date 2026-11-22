@@ -8,9 +8,12 @@ public sealed class EyesOptions
 
 	public string Emotion { get; set; }
 
+	public string Companion { get; set; }
+
 	public EyesOptions()
 	{
 		Skin = "ayn";
 		Emotion = "auto";
+		Companion = "eyes";
 	}
 }

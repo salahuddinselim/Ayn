@@ -246,7 +246,7 @@ internal static class SettingsPages
 			"guard" => ExtrasPage(ctx, "guard"), 
 			"todo" => PersonalToolPage(ctx, "todo"), 
 			"wifi" => PersonalToolPage(ctx, "wifi"), 
-			"pets" => PersonalToolPage(ctx, "pets"), 
+
 
 			"license" => LicenseAndUpdatesPage(ctx), 
 			"about" => AboutPage(ctx), 
@@ -665,6 +665,11 @@ internal static class SettingsPages
 			eyeCards.SetSelection(eyes.Skin);
 		});
 		page.Children.Add(eyeCards);
+		List<KeyValuePair<string, string>> companionItems = new List<KeyValuePair<string, string>>();
+		foreach (var companion in NotchCompanions.All)
+			companionItems.Add(new KeyValuePair<string, string>(companion, NotchCompanions.Title(companion)));
+		page.Children.Add(SUI.DropdownRow("Notch companion", "What appears where the eyes are", companionItems,
+			eyes.Companion, delegate(string k) { eyes.Companion = k; }, 200.0, "setting-notch-companion", () => eyes.Companion));
 		page.Children.Add(SUI.SectionLabel("When closed, show"));
 		Grid clockStyleRow = SUI.SegmentedRow("Clock style", null, new string[2] { "Digital", "Analog" }, new string[2] { "digital", "analog" }, cfg.NotchAnalogClock ? "analog" : "digital", delegate(string k)
 		{
@@ -3150,33 +3155,6 @@ internal static class SettingsPages
 		{
 			page.Children.Add(SUI.SectionLabel("Wi-Fi QR"));
 			page.Children.Add(SUI.Note("Open the QR & Wi-Fi Share tool, pick your saved network, then press 'Make Wi-Fi QR'. Press 'Share on LAN' to let other devices scan it from http://your-pc:8787."));
-		}
-		else if (id == "pets")
-		{
-			page.Children.Add(SUI.SectionLabel("Pets"));
-			page.Children.Add(SUI.Note("Choose a companion below. It is drawn locally with no downloads."));
-			var pet = new CompanionPetCanvas
-			{
-				Kind = AynExtrasService.Instance.Config.PetKind,
-				HorizontalAlignment = System.Windows.HorizontalAlignment.Left,
-				Margin = new Thickness(0, 12, 0, 0)
-			};
-			page.Children.Add(pet);
-			var choices = new WrapPanel { Margin = new Thickness(0, 8, 0, 0) };
-			foreach (var kind in new[] { "ditto", "cat", "husky", "pikachu", "doraemon", "dots", "grok", "robot" })
-			{
-				var b = new SButton(char.ToUpperInvariant(kind[0]) + kind.Substring(1), SButtonKind.Secondary);
-				b.Margin = new Thickness(0, 0, 6, 6);
-				var chosen = kind;
-				b.Click += delegate
-				{
-					pet.Kind = chosen;
-					AynExtrasService.Instance.Config.PetKind = chosen;
-					AynExtrasService.Instance.Config.Save();
-				};
-				choices.Children.Add(b);
-			}
-			page.Children.Add(choices);
 		}
 		else
 		{
