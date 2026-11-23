@@ -24,7 +24,6 @@ using WindowsBuddy.BuddyCapsule.Renderer;
 using WindowsBuddy.BuddyCapsule.Theme;
 using WindowsBuddy.BuddyCapsule.UI;
 using WindowsBuddy.Extras;
-using WindowsBuddy.Tools.Personal;
 using WindowsBuddy.Core;
 using WindowsBuddy.Services;
 using WindowsBuddy.Services.Pet;
@@ -243,7 +242,7 @@ internal static class SettingsPages
 			"privacy" => PrivacyPage(ctx), 
 			"breaks" => ExtrasPage(ctx, "breaks"), 
 			"salat" => ExtrasPage(ctx, "salat"), 
-			"guard" => ExtrasPage(ctx, "guard"), 
+
 			"todo" => PersonalToolPage(ctx, "todo"), 
 			"wifi" => PersonalToolPage(ctx, "wifi"), 
 
@@ -665,11 +664,6 @@ internal static class SettingsPages
 			eyeCards.SetSelection(eyes.Skin);
 		});
 		page.Children.Add(eyeCards);
-		List<KeyValuePair<string, string>> companionItems = new List<KeyValuePair<string, string>>();
-		foreach (var companion in NotchCompanions.All)
-			companionItems.Add(new KeyValuePair<string, string>(companion, NotchCompanions.Title(companion)));
-		page.Children.Add(SUI.DropdownRow("Notch companion", "What appears where the eyes are", companionItems,
-			eyes.Companion, delegate(string k) { eyes.Companion = k; }, 200.0, "setting-notch-companion", () => eyes.Companion));
 		page.Children.Add(SUI.SectionLabel("When closed, show"));
 		Grid clockStyleRow = SUI.SegmentedRow("Clock style", null, new string[2] { "Digital", "Analog" }, new string[2] { "digital", "analog" }, cfg.NotchAnalogClock ? "analog" : "digital", delegate(string k)
 		{
@@ -1131,13 +1125,14 @@ internal static class SettingsPages
 		StackPanel stackPanel = Page("appearance");
 		NotchConfig cfg = NotchConfig.Instance;
 		stackPanel.Children.Add(SUI.SectionLabel("Theme"));
-		ChoiceCards themeCards = new ChoiceCards(new ChoiceCards.Option[4]
+		ChoiceCards themeCards = new ChoiceCards(new ChoiceCards.Option[5]
 		{
 			new ChoiceCards.Option("PureBlack", "Pure Black", "Monochrome on true black", ThemePreview("PureBlack")),
 			new ChoiceCards.Option("EmberDark", "Ember Dark", "Black with an orange accent", ThemePreview("EmberDark")),
 			new ChoiceCards.Option("Vivid", "Vivid", "Black with a blue accent", ThemePreview("Vivid")),
-			new ChoiceCards.Option("Silver", "Silver", "Light panel; the notch stays black", ThemePreview("Silver"))
-		}, cfg.AppTheme, "Theme", 4);
+			new ChoiceCards.Option("Silver", "Silver", "Light panel; the notch stays black", ThemePreview("Silver")),
+			new ChoiceCards.Option("Glass", "Glass", "Warm frosted glass with soft depth", ThemePreview("Glass"))
+		}, cfg.AppTheme, "Theme", 5);
 		themeCards.Tag = "setting-card-theme";
 		AutomationProperties.SetName(themeCards, "Theme");
 		SSettingBinding.Attach(themeCards, delegate
@@ -3113,37 +3108,6 @@ internal static class SettingsPages
 		foreach (AynPrayerTime prayer in extras.TodayPrayers())
 			prayers.Text += prayer.Name.PadRight(12) + prayer.Time.ToString("h:mm tt") + "\n";
 		page.Children.Add(SUI.Group(prayers));
-
-		}
-		if (section == "all" || section == "guard")
-		{
-		page.Children.Add(SUI.SectionLabel("Network Guard"));
-		page.Children.Add(SUI.Group(
-			SUI.ToggleRow("Network Guard", "Local DNS sinkhole for every device on your Wi-Fi.", cfg.BlockerEnabled, delegate(bool v)
-			{
-				cfg.BlockerEnabled = v;
-				cfg.Save();
-			}, null, "setting-extras-guard", () => cfg.BlockerEnabled),
-			SUI.ToggleRow("Block pornographic sites", "Adult domains resolve to 0.0.0.0.", cfg.BlockPorn, delegate(bool v) { cfg.BlockPorn = v; cfg.Save(); }, null, "setting-extras-porn", () => cfg.BlockPorn),
-			SUI.ToggleRow("Block betting sites and apps", "Betting domains and known processes.", cfg.BlockBetting, delegate(bool v) { cfg.BlockBetting = v; cfg.Save(); }, null, "setting-extras-betting", () => cfg.BlockBetting),
-			SUI.ToggleRow("Block ads", "Common advertising and tracking domains.", cfg.BlockAds, delegate(bool v) { cfg.BlockAds = v; cfg.Save(); }, null, "setting-extras-ads", () => cfg.BlockAds),
-			SUI.ToggleRow("Close betting apps", "Watch for and close known betting processes.", cfg.BlockApps, delegate(bool v) { cfg.BlockApps = v; cfg.Save(); }, null, "setting-extras-apps", () => cfg.BlockApps),
-			SUI.Row("DNS port", "Point your router's DNS at this PC", MakeBox(cfg.DnsPort.ToString(CultureInfo.InvariantCulture), delegate(string v)
-			{
-				if (int.TryParse(v, out var n)) { cfg.DnsPort = n; cfg.Save(); }
-			}, 70))
-		));
-		TextBlock guardStatus = SettingsTheme.Text("", 12.0, SettingsTheme.TextSecondary, FontWeights.Normal);
-		page.Children.Add(SUI.Group(guardStatus));
-		DispatcherTimer guardTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(2) };
-		guardTimer.Tick += delegate
-		{
-			guardStatus.Text = extras.DnsRunning
-				? $"Running on UDP {cfg.DnsPort} Â· {extras.DnsBlocked:N0} blocked Â· {extras.DnsAllowed:N0} allowed"
-				: "Stopped. Enable Network Guard above, then set your router DNS to this PC's IP.";
-		};
-		guardTimer.Start();
-		ctx.OnClose(delegate { guardTimer.Stop(); });
 
 		}
 		return page;

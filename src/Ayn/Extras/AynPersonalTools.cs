@@ -105,7 +105,7 @@ public sealed class BreaksTool : AynPersonalToolBase
         var cfg = _svc.Config;
         var work = Math.Max(0, cfg.WorkMinutes - _svc.ActiveWork.TotalMinutes);
         _status.Text = _svc.OnBreak
-            ? $"On break — {Math.Max(0, cfg.BreakMinutes - _svc.ActiveBreak.TotalMinutes):0} min left."
+            ? $"On break â€” {Math.Max(0, cfg.BreakMinutes - _svc.ActiveBreak.TotalMinutes):0} min left."
             : $"Break in {work:0} min. Lunch at {cfg.LunchTime}, dinner at {cfg.DinnerTime}.";
     }
 
@@ -167,51 +167,5 @@ public sealed class SalatTool : AynPersonalToolBase
         foreach (var prayer in AynExtrasService.Instance.TodayPrayers())
             sb.AppendLine($"{prayer.Name,-10}  {prayer.Time:h:mm tt}");
         _list.Text = sb.ToString();
-    }
-}
-
-public sealed class GuardTool : AynPersonalToolBase
-{
-    private TextBlock _status;
-    private readonly AynExtrasService _svc = AynExtrasService.Instance;
-
-    public GuardTool() => OrderIndex = 4;
-
-    public override string Id => "guard";
-    public override string DisplayName => "Network Guard";
-
-    public override UIElement CreateIcon(double size, Brush stroke) => VectorIcons.CreateWiFiIcon(size, stroke);
-
-    protected override FrameworkElement BuildView()
-    {
-        var root = new StackPanel { Margin = new Thickness(18, 14, 18, 14) };
-        root.Children.Add(BreaksTool.Heading("Network Guard"));
-        _status = new TextBlock
-        {
-            Foreground = ThemeTokens.Text,
-            FontSize = 13,
-            TextWrapping = TextWrapping.Wrap,
-            Margin = new Thickness(0, 14, 0, 0)
-        };
-        root.Children.Add(_status);
-        var buttons = new StackPanel { Orientation = Orientation.Horizontal, Margin = new Thickness(0, 18, 0, 0) };
-        buttons.Children.Add(BreaksTool.ActionButton("Start / Stop", Toggle));
-        root.Children.Add(buttons);
-        return root;
-    }
-
-    private void Toggle()
-    {
-        if (_svc.DnsRunning) _svc.StopDns();
-        else _svc.StartDnsPublic();
-        RefreshView();
-    }
-
-    protected override void RefreshView()
-    {
-        if (_status == null) return;
-        _status.Text = _svc.DnsRunning
-            ? $"Protecting this network on UDP {_svc.Config.DnsPort}.\n{_svc.DnsBlocked:N0} blocked · {_svc.DnsAllowed:N0} allowed."
-            : "Guard is off. Point your router DNS at this PC to protect every device.";
     }
 }

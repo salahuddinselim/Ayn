@@ -27,10 +27,10 @@ public class ToolRegistry
 
 	private static ToolRegistry _instance;
 
-	public static readonly string[] CanonicalDefaultDockOrder = new string[23]
+	public static readonly string[] CanonicalDefaultDockOrder = new string[22]
 	{
 		"home", "system", "clipboard", "notes", "timer", "todo", "shelf", "drop", "weather", "clock",
-		"breaks", "salat", "guard", "qr", "docs", "units", "links", "screentime",
+		"breaks", "salat", "qr", "docs", "units", "links", "screentime",
 		"calendar", "files", "analytics", "aicoding", "revenue"
 	};
 

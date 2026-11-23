@@ -463,7 +463,10 @@ internal sealed class SettingsWindow : Window
 			SetDarkTitleBar(handle, DwmSetWindowAttribute);
 			int value = 2;
 			DwmSetWindowAttribute(handle, 33, ref value, 4);
-			int value2 = 2236962;
+			bool glass = string.Equals(NotchConfig.Instance.AppTheme, "Glass", StringComparison.OrdinalIgnoreCase);
+			int backdrop = glass ? 2 : 0;
+			DwmSetWindowAttribute(handle, 38, ref backdrop, 4);
+			int value2 = glass ? 14205408 : 2236962;
 			DwmSetWindowAttribute(handle, 34, ref value2, 4);
 		}
 		catch

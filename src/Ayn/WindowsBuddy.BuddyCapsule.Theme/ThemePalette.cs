@@ -154,6 +154,12 @@ public sealed class ThemePalette
 		SegmentThumb = (IsLight ? Color.FromRgb(byte.MaxValue, byte.MaxValue, byte.MaxValue) : Color.FromRgb(58, 58, 60));
 		CardBorder = (IsLight ? Colors.Transparent : Border);
 		CardShadow = IsLight;
+		if (Id == "Glass")
+		{
+			CardBorder = Border;
+			CardShadow = true;
+			Selection = Color.FromArgb(40, 176, 126, 82);
+		}
 		if (Id == "EmberDark")
 		{
 			AccentStrong = Color.FromRgb(194, 65, 12);

@@ -229,7 +229,7 @@ public static class ThemeTokens
 
 	static ThemeTokens()
 	{
-		Ids = new string[4] { "PureBlack", "EmberDark", "Vivid", "Silver" };
+		Ids = new string[5] { "PureBlack", "EmberDark", "Vivid", "Silver", "Glass" };
 		Transition = new Duration(TimeSpan.FromMilliseconds(150.0));
 		NotchBlack = Color.FromRgb(0, 0, 0);
 		Bg = B();
@@ -720,8 +720,44 @@ public static class ThemeTokens
 		themePalette6.Border = Color.FromArgb(0, 0, 0, 0);
 		PointWidgetsAtAccent(themePalette6);
 		SoftFunctional(themePalette6);
+		ThemePalette glass = new ThemePalette();
+		glass.Id = "Glass";
+		glass.DisplayName = "Glass";
+		glass.IsLight = true;
+		glass.Bg = Color.FromRgb(238, 232, 222);
+		glass.Surface = Color.FromArgb(150, 255, 252, 246);
+		glass.Surface2 = Color.FromArgb(105, 255, 250, 242);
+		glass.Surface3 = Color.FromArgb(135, 232, 220, 204);
+		glass.Overlay = Color.FromArgb(120, 60, 52, 44);
+		glass.Border = Color.FromArgb(120, 255, 255, 255);
+		glass.BorderStrong = Color.FromArgb(170, 255, 255, 255);
+		glass.Text = Color.FromRgb(46, 42, 38);
+		glass.Text2 = Color.FromRgb(104, 95, 86);
+		glass.Text3 = Color.FromRgb(134, 124, 112);
+		glass.TextDisabled = Color.FromRgb(170, 162, 150);
+		glass.Icon = Color.FromRgb(64, 56, 48);
+		glass.IconMuted = Color.FromRgb(132, 122, 110);
+		glass.Accent = Color.FromRgb(176, 126, 82);
+		glass.AccentFg = Colors.White;
+		glass.AccentSoft = Color.FromArgb(60, 176, 126, 82);
+		glass.Track = Color.FromArgb(80, 120, 108, 94);
+		glass.Bar = Color.FromArgb(190, 176, 126, 82);
+		glass.Chart1 = Color.FromRgb(176, 126, 82);
+		glass.Chart2 = Color.FromRgb(120, 150, 130);
+		glass.Chart3 = Color.FromRgb(198, 152, 118);
+		glass.Chart4 = Color.FromRgb(140, 130, 165);
+		glass.Focus = Color.FromRgb(176, 126, 82);
+		glass.Success = Color.FromRgb(70, 140, 100);
+		glass.Warning = Color.FromRgb(190, 140, 60);
+		glass.Danger = Color.FromRgb(190, 80, 75);
+		glass.Info = Color.FromRgb(80, 130, 180);
+		glass.Rule = Color.FromArgb(70, 120, 108, 94);
+		glass.CardShadow = true;
+		PointWidgetsAtAccent(glass);
+		SoftFunctional(glass);
+
 		Dictionary<string, ThemePalette> dictionary = new Dictionary<string, ThemePalette>(StringComparer.OrdinalIgnoreCase);
-		ThemePalette[] array = new ThemePalette[4] { themePalette2, themePalette3, themePalette4, themePalette6 };
+		ThemePalette[] array = new ThemePalette[5] { themePalette2, themePalette3, themePalette4, themePalette6, glass };
 		foreach (ThemePalette themePalette7 in array)
 		{
 			dictionary[themePalette7.Id] = themePalette7.Finish();

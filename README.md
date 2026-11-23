@@ -30,16 +30,10 @@ conversion) and the .NET/WPF platform.
 ## Features
 
 - **The notch** — an always-on-top pill with two animated eyes that follow the cursor.
-- **Automatic emotions** — the eyes react on their own to time of day, battery, focus,
-  idle state and activity: happy, sad, sleepy, surprised, ego and cry. No settings toggle.
-- **Companions in the notch** — replace the animated eyes with Ditto, Cat, Husky,
-  Pikachu, Doraemon, ChatGPT-style dots, Grok or Robot. Choose one in Settings → Notch
-  → "Notch companion". Everything is drawn locally; nothing to download.
 - **Home** — screen time, CPU/RAM/disk, weather, focus timer, clipboard, notes and live
   internet speed.
 - **Breaks & Meals** — a nudge after configurable computer time, plus lunch and dinner reminders.
 - **Salat times** — calculated from your city or IP-detected area.
-- **Network Guard** — a local DNS sinkhole blocking adult sites, betting sites/apps and ads.
 - **QR & Wi-Fi Share** — make a QR for any text, generate a Wi-Fi QR from saved networks,
   and serve it on your LAN so other devices can scan it.
 - **To-Do List** — add, complete and remove tasks; stored locally.
@@ -47,13 +41,15 @@ conversion) and the .NET/WPF platform.
 - **Doc Converter** — documents to PDF, DOCX, XLSX, PPTX, RTF, TXT, HTML, ODT and CSV
   (uses LibreOffice if installed).
 - **AI token usage** — totals from local Claude Code, Codex and OpenCode sessions.
+- **Appearances** — Pure Black, Ember Dark, Vivid, Silver and **Glass** (warm frosted
+  glass with translucent cards and a Mica backdrop on Windows 11). Dark themes stay
+  available; Glass is just another choice.
 
 ## Where things are
 
 Open **Settings** from the notch gear icon. Your features have their own sidebar pages:
-**Breaks & Meals**, **Salat Times**, **Network Guard**, **To-Do List**, **Wi-Fi QR**,
-plus the standard Notch and Appearance pages. The companion lives in the notch itself —
-choose it in **Notch → Notch companion**.
+**Breaks & Meals**, **Salat Times**, **To-Do List**, **Wi-Fi QR**, plus the standard
+**Notch** and **Appearance** pages. Choose the Glass look in **Appearance → Theme**.
 
 To share Wi-Fi: Settings → **Wi-Fi QR** → **Open in notch** → choose your network →
 **Make Wi-Fi QR** → optionally **Share on LAN** (`http://<your-pc>:8787`).
@@ -82,8 +78,6 @@ wix build Installer\Product.wxs Installer\Files.wxs -o Installer\Ayn-Setup.msi
 
 Settings and data live in `%LOCALAPPDATA%\Ayn`. Nothing is uploaded. Network requests are
 limited to optional city/IP lookup for prayer times and the LAN share you explicitly start.
-Network Guard listens on UDP 5354; point your router DNS at this PC (and forward UDP 53 to
-5354 if needed) to protect every device on the Wi-Fi.
 
 ## License
 

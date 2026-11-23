@@ -39,7 +39,6 @@ public static class BuddyToolIcons
 		Register(new BuddyToolDefinition("emoji", "Emoji", "emoji", ToolCategory.Utility));
 		Register(new BuddyToolDefinition("breaks", "Breaks & Meals", "breaks", ToolCategory.Utility));
 		Register(new BuddyToolDefinition("salat", "Salat Times", "salat", ToolCategory.Utility));
-		Register(new BuddyToolDefinition("guard", "Network Guard", "guard", ToolCategory.System));
 		Register(new BuddyToolDefinition("qr", "QR & Wi-Fi Share", "qr", ToolCategory.Utility));
 		Register(new BuddyToolDefinition("docs", "Doc Converter", "docs", ToolCategory.Productivity));
 		Register(new BuddyToolDefinition("todo", "To-Do List", "todo", ToolCategory.Productivity));
@@ -96,7 +95,6 @@ public static class BuddyToolIcons
 			"aicoding" => "bot", 
 			"breaks" => "timer", 
 			"salat" => "calendar_ltr", 
-			"guard" => "wifi_1", 
 			"qr" => "developer_board", 
 			"docs" => "folder", 
 			"todo" => "clipboard_text_ltr", 
