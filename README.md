@@ -47,6 +47,8 @@ conversion) and the .NET/WPF platform.
 - **Glass Studio** — in Appearance, a live hero preview with sliders for outer-frame
   opacity, action-card opacity, blur intensity and border visibility.
 
+- **Ayn Liquid Glass skill** — installed for OpenCode and Claude at `~/.config/opencode/skills/ayn-liquid-glass` and `~/.claude/skills/ayn-liquid-glass`, covering the material recipe, theme tokens, opacity controls and performance guardrails.
+
 ## Design and performance
 
 All five appearances (Pure Black, Ember Dark, Vivid, Silver and Glass) now share a liquid-glass material: translucent functional surfaces, hairline specular edges, nested bezel cards and a soft elevated shadow. The notch, settings cards, dialogs and Glass Studio follow the selected theme. Window transparency sliders let any appearance become see-through.

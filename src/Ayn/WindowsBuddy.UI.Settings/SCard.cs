@@ -26,7 +26,7 @@ internal sealed class SCard : Border
 			BorderThickness = new Thickness(1.0),
 			CornerRadius = new CornerRadius(18.0),
 			Background = Brushes.Transparent,
-			IsHitTestVisible = false,
+			IsHitTestVisible = true,
 			Child = Stack
 		};
 	}

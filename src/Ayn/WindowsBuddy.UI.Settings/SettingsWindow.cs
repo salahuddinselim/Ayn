@@ -680,7 +680,7 @@ internal sealed class SettingsWindow : Window
 	private UIElement BuildSidebar()
 	{
 		Grid grid = new Grid();
-		grid.Background = SettingsTheme.SidebarBg;
+		grid.Background = System.Windows.Media.Brushes.Transparent;
 		Grid grid2 = grid;
 		grid2.RowDefinitions.Add(new RowDefinition
 		{
