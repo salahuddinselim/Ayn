@@ -1156,6 +1156,21 @@ internal static class SettingsPages
 				SUI.SliderRow("Glass blur", "Backdrop blur intensity", 0, 32, 1, glass.GlassBlur, v => $"{v:0} px", v => { glass.GlassBlur = v; glass.Save(); hero.ApplyGlass(); }, 180, "setting-glass-blur", () => glass.GlassBlur),
 				SUI.SliderRow("Border visibility", "Frosted edge highlight", 0, 50, 1, Math.Round(glass.GlassBorderOpacity * 100), v => $"{v:0}%", v => { glass.GlassBorderOpacity = v / 100; glass.Save(); hero.ApplyGlass(); }, 180, "setting-glass-border", () => Math.Round(glass.GlassBorderOpacity * 100))));
 		}
+		stackPanel.Children.Add(SUI.SectionLabel("Window transparency"));
+		var transparency = AynExtrasService.Instance.Config;
+		stackPanel.Children.Add(SUI.Group(
+			SUI.SliderRow("Settings window", "0% solid, 100% fully see-through", 0, 100, 1, transparency.SettingsTransparency, v => $"{v:0}%", v =>
+			{
+				transparency.SettingsTransparency = v;
+				transparency.Save();
+				SettingsWindow.Current?.ApplyGlobalTransparency();
+			}, 180, "setting-settings-transparency", () => transparency.SettingsTransparency),
+			SUI.SliderRow("Floating notch", "0% solid, 100% fully see-through", 0, 100, 1, transparency.NotchTransparency, v => $"{v:0}%", v =>
+			{
+				transparency.NotchTransparency = v;
+				transparency.Save();
+				CapsuleWindow.Instance?.ApplyGlobalTransparency();
+			}, 180, "setting-notch-transparency", () => transparency.NotchTransparency)));
 		stackPanel.Children.Add(SUI.Group(SUI.SliderRow("Closed notch opacity", "Background only", 40.0, 100.0, 1.0, Math.Round(cfg.ClosedNotchOpacity * 100.0), (double v) => $"{v:0}%", delegate(double v)
 		{
 			cfg.ClosedNotchOpacity = v / 100.0;

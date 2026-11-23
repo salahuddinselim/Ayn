@@ -31,6 +31,9 @@ public sealed class AynExtrasConfig
     public double GlassBlur { get; set; } = 16;
     public double GlassBorderOpacity { get; set; } = 0.20;
 
+    public double SettingsTransparency { get; set; }
+    public double NotchTransparency { get; set; }
+
     private static readonly JsonSerializerOptions Options = new()
     {
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
@@ -58,6 +61,8 @@ public sealed class AynExtrasConfig
     {
         WorkMinutes = Math.Clamp(WorkMinutes, 1, 480);
         BreakMinutes = Math.Clamp(BreakMinutes, 1, 60);
+        SettingsTransparency = Math.Clamp(SettingsTransparency, 0, 100);
+        NotchTransparency = Math.Clamp(NotchTransparency, 0, 100);
     }
 
     public void Save()

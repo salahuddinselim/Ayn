@@ -1936,7 +1936,7 @@ public class CapsuleWindow : Window, INotchSurface
 	{
 		base.Title = "Ayn";
 		base.WindowStyle = WindowStyle.None;
-		base.AllowsTransparency = !DwmComposed;
+		base.AllowsTransparency = !DwmComposed || WindowsBuddy.Extras.AynExtrasService.Instance.Config.NotchTransparency > 0;
 		base.Background = (DwmComposed ? System.Windows.Media.Brushes.Transparent : null);
 		base.ResizeMode = ResizeMode.NoResize;
 		base.Topmost = true;
@@ -6431,7 +6431,7 @@ public class CapsuleWindow : Window, INotchSurface
 
 	private System.Windows.Media.Brush PanelFill(NotchConfig cfg)
 	{
-		_panelAlpha = byte.MaxValue;
+		_panelAlpha = (byte)Math.Round(255.0 * (1.0 - WindowsBuddy.Extras.AynExtrasService.Instance.Config.NotchTransparency / 100.0));
 		_closedNotchOpacity = cfg.ClosedNotchOpacity;
 		if (_petOutside != null)
 		{
@@ -6468,6 +6468,13 @@ public class CapsuleWindow : Window, INotchSurface
 		System.Windows.Media.Color notchBlack = ThemeTokens.NotchBlack;
 		double num = Math.Max(0.0, Math.Min(1.0, t / 0.7));
 		return System.Windows.Media.Color.FromArgb(_panelAlpha, (byte)Math.Round((double)(int)notchBlack.R + (double)(color.R - notchBlack.R) * num), (byte)Math.Round((double)(int)notchBlack.G + (double)(color.G - notchBlack.G) * num), (byte)Math.Round((double)(int)notchBlack.B + (double)(color.B - notchBlack.B) * num));
+	}
+
+	public void ApplyGlobalTransparency()
+	{
+		var cfg = WindowsBuddy.Extras.AynExtrasService.Instance.Config;
+		_panelAlpha = (byte)Math.Round(255.0 * (1.0 - cfg.NotchTransparency / 100.0));
+		UpdatePanelFill(MorphProgress);
 	}
 
 	private void UpdatePanelFill(double t)

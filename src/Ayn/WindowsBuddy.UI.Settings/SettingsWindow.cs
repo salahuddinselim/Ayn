@@ -79,6 +79,8 @@ internal sealed class SettingsWindow : Window
 	private static SettingsWindow _current;
 
 	private readonly Grid _root;
+	private Grid _contentGrid;
+	private Grid _sidebarGrid;
 
 	private StackPanel _navStack;
 
@@ -203,7 +205,8 @@ internal sealed class SettingsWindow : Window
 		base.MinHeight = 360.0;
 		base.MaxHeight = double.PositiveInfinity;
 		base.Height = 720.0;
-		base.Background = SettingsTheme.ContentBg;
+		base.AllowsTransparency = true;
+		base.Background = System.Windows.Media.Brushes.Transparent;
 		base.Foreground = SettingsTheme.TextPrimary;
 		base.FontFamily = SettingsTheme.Font;
 		base.FontSize = 15.0;
@@ -237,11 +240,13 @@ internal sealed class SettingsWindow : Window
 		{
 			Width = new GridLength(1.0, GridUnitType.Star)
 		});
-		_root.Children.Add(BuildSidebar());
-		Grid grid = new Grid
+		_sidebarGrid = BuildSidebar() as Grid;
+		_root.Children.Add(_sidebarGrid);
+		_contentGrid = new Grid
 		{
 			Background = SettingsTheme.ContentBg
 		};
+		Grid grid = _contentGrid;
 		grid.RowDefinitions.Add(new RowDefinition
 		{
 			Height = new GridLength(44.0)
@@ -267,6 +272,8 @@ internal sealed class SettingsWindow : Window
 		_root.Children.Add(grid);
 		base.Content = _root;
 		WindowsBuddy.Tools.Personal.GlassShell.Apply(this, _root);
+		ApplyGlobalTransparency();
+		ThemeTokens.ThemeChanged += (_, _) => Dispatcher.BeginInvoke(new Action(ApplyGlobalTransparency));
 		_toolsUpdated = delegate
 		{
 			if (base.Dispatcher.CheckAccess())
@@ -452,6 +459,16 @@ internal sealed class SettingsWindow : Window
 			return 0;
 		}
 		return 19;
+	}
+
+	public void ApplyGlobalTransparency()
+	{
+		var cfg = WindowsBuddy.Extras.AynExtrasService.Instance.Config;
+		var alpha = (byte)Math.Round(255.0 * (1.0 - cfg.SettingsTransparency / 100.0));
+		if (_contentGrid != null)
+			_contentGrid.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(alpha, 11, 11, 12));
+		if (_sidebarGrid != null)
+			_sidebarGrid.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(alpha, 18, 18, 20));
 	}
 
 	private void ApplyDwmStyle()
