@@ -78,6 +78,7 @@ internal static class SettingsSearch
 		new Entry("notch", "Edge light", "Intensity", "brightness edge light"),
 		new Entry("notch", "Edge light", "Speed", "edge light speed"),
 		new Entry("notch", "Edge light", "When", "edge light always events hover animation"),
+		new Entry("appearance", "Glass Studio", "Glass Studio", "glass opacity blur border frosted translucent preview"),
 		new Entry("appearance", "Surface", "Outline", "border stroke hairline outline"),
 		new Entry("appearance", "Surface", "Outline width", "border thickness outline width"),
 		new Entry("appearance", "Surface", "Tint outline from wallpaper", "adapt wallpaper color tint"),
