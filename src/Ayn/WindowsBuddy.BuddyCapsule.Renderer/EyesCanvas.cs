@@ -250,31 +250,28 @@ internal sealed class EyesCanvas
 		Ellipse(cu, cv, r, r, 0f);
 	}
 
+	private readonly float[] ArcX = new float[4];
+	private readonly float[] ArcY = new float[4];
+
 	public void RoundRect(float u, float v, float w, float h, float r)
 	{
 		r = Math.Max(0f, Math.Min(r, Math.Min(w, h) * 0.5f));
 		int num = Math.Max(4, Math.Min(16, (int)(r * ps * 0.9f) + 3));
 		StartSub();
-		float[] array = new float[4]
-		{
-			u + w - r,
-			u + w - r,
-			u + r,
-			u + r
-		};
-		float[] array2 = new float[4]
-		{
-			v + r,
-			v + h - r,
-			v + h - r,
-			v + r
-		};
+		
+		
+		ArcX[0] = ArcX[1] = u + w - r;
+		ArcX[2] = ArcX[3] = u + r;
+		ArcY[0] = v + r;
+		ArcY[1] = v + h - r;
+		ArcY[2] = v + h - r;
+		ArcY[3] = v + r;
 		for (int i = 0; i < 4; i++)
 		{
 			for (int j = 0; j <= num; j++)
 			{
 				double num2 = (double)(i * 90 + 270) * Math.PI / 180.0 + (double)j * (Math.PI / 2.0) / (double)num;
-				AddPx(Tx(array[i] + r * (float)Math.Cos(num2)), Ty(array2[i] + r * (float)Math.Sin(num2)));
+				AddPx(Tx(ArcX[i] + r * (float)Math.Cos(num2)), Ty(ArcY[i] + r * (float)Math.Sin(num2)));
 			}
 		}
 		Close();

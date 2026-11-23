@@ -174,9 +174,9 @@ public class BuddyAnimationStyleSelector : Grid
 			base.Children.Add(btn);
 		}
 		UpdateSelectionState();
-		_animTimer = new DispatcherTimer(DispatcherPriority.Render)
+		_animTimer = new DispatcherTimer(DispatcherPriority.Background)
 		{
-			Interval = TimeSpan.FromMilliseconds(40.0)
+			Interval = TimeSpan.FromMilliseconds(60.0)
 		};
 		_animTimer.Tick += delegate
 		{

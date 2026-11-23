@@ -1,4 +1,5 @@
 using System;
+using WindowsBuddy.Liquid;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -21,10 +22,11 @@ public class BuddyThemeCard : Border
 	{
 		BuddyTheme.Crisp(this);
 		RenderOptions.SetClearTypeHint(this, ClearTypeHint.Enabled);
-		base.Background = _fill;
-		base.BorderBrush = ThemeTokens.CardBorder;
+		base.Background = ThemeTokens.GlassFill;
+		base.BorderBrush = ThemeTokens.GlassEdge;
 		base.BorderThickness = new Thickness(1.0);
-		base.CornerRadius = new CornerRadius(16.0);
+		base.CornerRadius = new CornerRadius(20.0);
+		base.Effect = LiquidGlass.GetSmallShadow();
 		base.Padding = new Thickness(13.0, 13.0, 13.0, 11.0);
 		ThemeTokens.Subscribe(this, delegate(BuddyThemeCard c)
 		{

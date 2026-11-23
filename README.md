@@ -47,6 +47,12 @@ conversion) and the .NET/WPF platform.
 - **Glass Studio** — in Appearance, a live hero preview with sliders for outer-frame
   opacity, action-card opacity, blur intensity and border visibility.
 
+## Design and performance
+
+All five appearances (Pure Black, Ember Dark, Vivid, Silver and Glass) now share a liquid-glass material: translucent functional surfaces, hairline specular edges, nested bezel cards and a soft elevated shadow. The notch, settings cards, dialogs and Glass Studio follow the selected theme. Window transparency sliders let any appearance become see-through.
+
+Performance work: the eye renderer now uses one background presentation tick instead of overlapping render-priority loops, the Glass Studio caches its effects and brushes, prayer times are cached per day/location, high-frequency notch and screen-time polling were reduced, and DropTool reuses its progress pens.
+
 ## Where things are
 
 Open **Settings** from the notch gear icon. Your features have their own sidebar pages:

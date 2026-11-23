@@ -1,4 +1,5 @@
 using System;
+using WindowsBuddy.Liquid;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -118,6 +119,12 @@ public static class ThemeTokens
 	public static readonly SolidColorBrush Focus;
 
 	public static readonly SolidColorBrush CardBorder;
+
+	public static readonly SolidColorBrush GlassFill;
+
+	public static readonly SolidColorBrush GlassEdge;
+
+	public static readonly SolidColorBrush GlassSheen;
 
 	public static readonly SolidColorBrush AccentStrong;
 
@@ -270,6 +277,9 @@ public static class ThemeTokens
 		InfoSoft = B();
 		Focus = B();
 		CardBorder = B();
+		GlassFill = B();
+		GlassEdge = B();
+		GlassSheen = B();
 		AccentStrong = B();
 		Inverse = B();
 		Rule = B();
@@ -632,9 +642,9 @@ public static class ThemeTokens
 		themePalette.Id = "PureBlack";
 		themePalette.DisplayName = "Pure Black";
 		themePalette.Bg = H(0u);
-		themePalette.Surface = H(921102u);
-		themePalette.Surface2 = H(1447446u);
-		themePalette.Surface3 = H(2039583u);
+		themePalette.Surface = Color.FromArgb(214, 14, 14, 15);
+		themePalette.Surface2 = Color.FromArgb(190, 22, 22, 24);
+		themePalette.Surface3 = Color.FromArgb(176, 31, 31, 34);
 		themePalette.Overlay = H(2566914048u);
 		themePalette.Border = H(268435455u);
 		themePalette.BorderStrong = H(536870911u);
@@ -674,7 +684,7 @@ public static class ThemeTokens
 		themePalette4.Id = "Vivid";
 		themePalette4.DisplayName = "Vivid";
 		themePalette4.UseIconTiles = false;
-		themePalette4.Surface = H(855311u);
+		themePalette4.Surface = Color.FromArgb(214, 13, 13, 15);
 		themePalette4.Accent = H(3112182u);
 		themePalette4.AccentFg = H(16777215u);
 		themePalette4.AccentSoft = H(607091958u);
@@ -689,9 +699,9 @@ public static class ThemeTokens
 		themePalette5.DisplayName = "Silver";
 		themePalette5.IsLight = true;
 		themePalette5.Bg = H(15921908u);
-		themePalette5.Surface = H(16777215u);
-		themePalette5.Surface2 = H(16119287u);
-		themePalette5.Surface3 = H(15527151u);
+		themePalette5.Surface = Color.FromArgb(214, 255, 255, 255);
+		themePalette5.Surface2 = Color.FromArgb(190, 246, 246, 248);
+		themePalette5.Surface3 = Color.FromArgb(180, 236, 236, 239);
 		themePalette5.Overlay = H(1073741824u);
 		themePalette5.Border = H(301989888u);
 		themePalette5.BorderStrong = H(603979776u);

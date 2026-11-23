@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using WindowsBuddy.Liquid;
 using System.Windows;
 using System.Windows.Automation;
 using System.Windows.Controls;
@@ -313,6 +314,6 @@ internal static class SettingsTheme
 
 	public static DropShadowEffect SoftShadow(double blur, double depth, double opacity)
 	{
-		return null;
+		return LiquidGlass.GetSmallShadow();
 	}
 }

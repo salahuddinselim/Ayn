@@ -1,4 +1,6 @@
 using System.Windows;
+using WindowsBuddy.BuddyCapsule.Theme;
+using WindowsBuddy.Liquid;
 using System.Windows.Controls;
 using System.Windows.Media;
 
@@ -12,10 +14,20 @@ internal sealed class SCard : Border
 	{
 		base.MaxWidth = 616.0;
 		base.HorizontalAlignment = HorizontalAlignment.Stretch;
-		base.Background = Brushes.Transparent;
-		base.BorderThickness = new Thickness(0.0);
-		base.CornerRadius = new CornerRadius(0.0);
+		base.Background = ThemeTokens.GlassFill;
+		base.BorderBrush = ThemeTokens.GlassEdge;
+		base.BorderThickness = new Thickness(1.0);
+		base.CornerRadius = new CornerRadius(20.0);
+		base.Effect = LiquidGlass.GetShadow();
 		base.SnapsToDevicePixels = true;
-		Child = Stack;
+		Child = new Border
+		{
+			BorderBrush = ThemeTokens.GlassSheen,
+			BorderThickness = new Thickness(1.0),
+			CornerRadius = new CornerRadius(18.0),
+			Background = Brushes.Transparent,
+			IsHitTestVisible = false,
+			Child = Stack
+		};
 	}
 }

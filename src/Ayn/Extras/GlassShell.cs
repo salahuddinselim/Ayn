@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using WindowsBuddy.BuddyCapsule.Theme;
 using WindowsBuddy.Extras;
 
 namespace WindowsBuddy.Tools.Personal;
@@ -9,6 +11,8 @@ namespace WindowsBuddy.Tools.Personal;
 public static class GlassShell
 {
     private static readonly List<System.WeakReference<Window>> Windows = [];
+    private static readonly SolidColorBrush Fill = new(Colors.Transparent);
+    private static readonly SolidColorBrush Edge = new(Colors.Transparent);
 
     public static void Apply(Window window, Panel root)
     {
@@ -22,7 +26,10 @@ public static class GlassShell
             Tag = tag,
             Margin = new Thickness(6),
             CornerRadius = new CornerRadius(36),
-            IsHitTestVisible = false
+            IsHitTestVisible = false,
+            Background = Fill,
+            BorderBrush = Edge,
+            BorderThickness = new Thickness(1)
         };
         System.Windows.Controls.Panel.SetZIndex(overlay, 90);
         root.Children.Add(overlay);
@@ -33,16 +40,14 @@ public static class GlassShell
     public static void RefreshAll()
     {
         var cfg = AynExtrasService.Instance.Config;
-        foreach (var weak in Windows.ToArray())
-        {
-            if (!weak.TryGetTarget(out var window) || window.Content is not Panel root) continue;
-            foreach (var child in root.Children)
-            {
-                if (child is not Border overlay || overlay.Tag as string != "ayn-glass-overlay") continue;
-                overlay.Background = new SolidColorBrush(Color.FromArgb((byte)(cfg.GlassOuterOpacity * 255), 255, 255, 255));
-                overlay.BorderBrush = new SolidColorBrush(Color.FromArgb((byte)(cfg.GlassBorderOpacity * 255), 255, 255, 255));
-                overlay.BorderThickness = new Thickness(1);
-            }
-        }
+        var source = ThemeTokens.Target(ThemeTokens.GlassFill);
+        var edge = ThemeTokens.Target(ThemeTokens.GlassEdge);
+        Fill.Color = Color.FromArgb(
+            (byte)(source.A * cfg.GlassOuterOpacity / 0.08), source.R, source.G, source.B);
+        Edge.Color = Color.FromArgb(
+            (byte)Math.Min(255, edge.A * cfg.GlassBorderOpacity / 0.2), edge.R, edge.G, edge.B);
+
+        for (var i = Windows.Count - 1; i >= 0; i--)
+            if (!Windows[i].TryGetTarget(out _)) Windows.RemoveAt(i);
     }
 }

@@ -81,6 +81,8 @@ internal sealed class SettingsWindow : Window
 	private readonly Grid _root;
 	private Grid _contentGrid;
 	private Border _sidebarBorder;
+	private readonly SolidColorBrush _contentFill = new(System.Windows.Media.Colors.Transparent);
+	private readonly SolidColorBrush _sidebarFill = new(System.Windows.Media.Colors.Transparent);
 
 	private StackPanel _navStack;
 
@@ -465,11 +467,13 @@ internal sealed class SettingsWindow : Window
 	public void ApplyGlobalTransparency()
 	{
 		var cfg = WindowsBuddy.Extras.AynExtrasService.Instance.Config;
-		var alpha = (byte)Math.Round(255.0 * (1.0 - cfg.SettingsTransparency / 100.0));
-		if (_contentGrid != null)
-			_contentGrid.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(alpha, 11, 11, 12));
-		if (_sidebarBorder != null)
-			_sidebarBorder.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(alpha, 18, 18, 20));
+		var fill = ThemeTokens.Target(ThemeTokens.GlassFill);
+		var deep = ThemeTokens.Target(ThemeTokens.Bg);
+		var alpha = (byte)Math.Round(fill.A * (1.0 - cfg.SettingsTransparency / 100.0));
+		_contentFill.Color = System.Windows.Media.Color.FromArgb(alpha, fill.R, fill.G, fill.B);
+		_sidebarFill.Color = System.Windows.Media.Color.FromArgb(alpha, deep.R, deep.G, deep.B);
+		if (_contentGrid != null) _contentGrid.Background = _contentFill;
+		if (_sidebarBorder != null) _sidebarBorder.Background = _sidebarFill;
 	}
 
 	private void ApplyDwmStyle()

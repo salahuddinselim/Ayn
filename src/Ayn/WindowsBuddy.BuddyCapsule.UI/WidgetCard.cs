@@ -1,4 +1,5 @@
 using System.Windows;
+using WindowsBuddy.Liquid;
 using System.Windows.Controls;
 using WindowsBuddy.BuddyCapsule.Theme;
 
@@ -16,7 +17,7 @@ public class WidgetCard : BuddyThemeCard
 
 	public WidgetCard(string icon, string label, string widget)
 	{
-		base.BorderThickness = new Thickness(0.0);
+		base.BorderThickness = new Thickness(1.0);
 		base.Padding = new Thickness(14.0, 14.0, 14.0, 12.0);
 		Body = new Grid
 		{

@@ -6464,10 +6464,11 @@ public class CapsuleWindow : Window, INotchSurface
 
 	private System.Windows.Media.Color PanelColorAt(double t)
 	{
-		System.Windows.Media.Color color = ThemeTokens.Target(ThemeTokens.Bg);
+		System.Windows.Media.Color color = ThemeTokens.Target(ThemeTokens.GlassFill);
 		System.Windows.Media.Color notchBlack = ThemeTokens.NotchBlack;
 		double num = Math.Max(0.0, Math.Min(1.0, t / 0.7));
-		return System.Windows.Media.Color.FromArgb(_panelAlpha, (byte)Math.Round((double)(int)notchBlack.R + (double)(color.R - notchBlack.R) * num), (byte)Math.Round((double)(int)notchBlack.G + (double)(color.G - notchBlack.G) * num), (byte)Math.Round((double)(int)notchBlack.B + (double)(color.B - notchBlack.B) * num));
+		byte alpha = (byte)Math.Round(_panelAlpha * (color.A / 255.0));
+		return System.Windows.Media.Color.FromArgb(alpha, (byte)Math.Round((double)(int)notchBlack.R + (double)(color.R - notchBlack.R) * num), (byte)Math.Round((double)(int)notchBlack.G + (double)(color.G - notchBlack.G) * num), (byte)Math.Round((double)(int)notchBlack.B + (double)(color.B - notchBlack.B) * num));
 	}
 
 	public void ApplyGlobalTransparency()
@@ -13610,7 +13611,7 @@ public class CapsuleWindow : Window, INotchSurface
 		};
 		_surfaceWatchdog = new DispatcherTimer
 		{
-			Interval = TimeSpan.FromMilliseconds(500.0)
+			Interval = TimeSpan.FromMilliseconds(1000.0)
 		};
 		_surfaceWatchdog.Tick += delegate
 		{
@@ -13826,7 +13827,7 @@ public class CapsuleWindow : Window, INotchSurface
 			{
 				_desktopClickPoll = new DispatcherTimer(DispatcherPriority.Input)
 				{
-					Interval = TimeSpan.FromMilliseconds(30.0)
+					Interval = TimeSpan.FromMilliseconds(60.0)
 				};
 				_desktopClickPoll.Tick += delegate
 				{

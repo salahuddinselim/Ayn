@@ -22,6 +22,9 @@ public sealed class AynExtrasService : IDisposable
     private bool _onBreak;
     private readonly HashSet<string> _firedToday = [];
     private DateOnly _firedDate = DateOnly.FromDateTime(DateTime.Today);
+    private DateOnly _prayerDate;
+    private string _prayerKey = "";
+    private IReadOnlyList<AynPrayerTime> _prayers = [];
 
     public static AynExtrasService Instance { get; } = new();
 
@@ -80,7 +83,7 @@ public sealed class AynExtrasService : IDisposable
 
         if (Config.SalatEnabled)
         {
-            foreach (var prayer in _salat.GetTimes(today, Config.Latitude, Config.Longitude, Config.SalatMethod, Config.TimezoneId))
+            foreach (var prayer in GetPrayers(today))
             {
                 if (DateTime.Now >= prayer.Time && DateTime.Now < prayer.Time.AddMinutes(30))
                     FireOnce("salat-" + prayer.Name, prayer.Time.ToString("HH:mm"),
@@ -167,9 +170,19 @@ public sealed class AynExtrasService : IDisposable
         catch { return false; }
     }
 
-    public IReadOnlyList<AynPrayerTime> TodayPrayers() =>
-        _salat.GetTimes(DateOnly.FromDateTime(DateTime.Today), Config.Latitude, Config.Longitude,
-            Config.SalatMethod, Config.TimezoneId);
+    public IReadOnlyList<AynPrayerTime> TodayPrayers() => GetPrayers(DateOnly.FromDateTime(DateTime.Today));
+
+    private IReadOnlyList<AynPrayerTime> GetPrayers(DateOnly date)
+    {
+        var key = Config.Latitude.ToString("0.####", System.Globalization.CultureInfo.InvariantCulture) + "|" +
+                  Config.Longitude.ToString("0.####", System.Globalization.CultureInfo.InvariantCulture) + "|" +
+                  Config.SalatMethod + "|" + Config.TimezoneId;
+        if (_prayerDate == date && _prayerKey == key) return _prayers;
+        _prayerDate = date;
+        _prayerKey = key;
+        _prayers = _salat.GetTimes(date, Config.Latitude, Config.Longitude, Config.SalatMethod, Config.TimezoneId);
+        return _prayers;
+    }
 
     public void Dispose()
     {

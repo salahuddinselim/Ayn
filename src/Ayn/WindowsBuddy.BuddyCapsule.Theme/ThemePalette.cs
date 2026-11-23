@@ -90,6 +90,12 @@ public sealed class ThemePalette
 
 	public Color CardBorder;
 
+	public Color GlassFill;
+
+	public Color GlassEdge;
+
+	public Color GlassSheen;
+
 	public bool CardShadow;
 
 	public Color Inverse;
@@ -152,12 +158,18 @@ public sealed class ThemePalette
 		ControlFill = (IsLight ? Color.FromArgb(15, 0, 0, 0) : Surface2);
 		ControlFillHover = (IsLight ? Color.FromArgb(23, 0, 0, 0) : Surface3);
 		SegmentThumb = (IsLight ? Color.FromRgb(byte.MaxValue, byte.MaxValue, byte.MaxValue) : Color.FromRgb(58, 58, 60));
-		CardBorder = (IsLight ? Colors.Transparent : Border);
-		CardShadow = IsLight;
+		CardBorder = (IsLight ? Border : BorderStrong);
+		CardShadow = true;
+
+		var fillSource = IsLight ? Colors.White : Surface;
+		GlassFill = Color.FromArgb(IsLight ? (byte)168 : (byte)196, fillSource.R, fillSource.G, fillSource.B);
+		GlassEdge = Color.FromArgb(IsLight ? (byte)96 : (byte)44, IsLight ? BorderStrong.R : (byte)255,
+			IsLight ? BorderStrong.G : (byte)255, IsLight ? BorderStrong.B : (byte)255);
+		GlassSheen = Color.FromArgb(IsLight ? (byte)150 : (byte)34, (byte)255, (byte)255, (byte)255);
+
 		if (Id == "Glass")
 		{
-			CardBorder = Border;
-			CardShadow = true;
+			CardBorder = BorderStrong;
 			Selection = Color.FromArgb(40, 176, 126, 82);
 		}
 		if (Id == "EmberDark")

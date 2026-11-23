@@ -352,9 +352,9 @@ internal sealed class EyesView : Image
 		});
 		if (timer == null)
 		{
-			timer = new DispatcherTimer(DispatcherPriority.Render)
+			timer = new DispatcherTimer(DispatcherPriority.Background)
 			{
-				Interval = TimeSpan.FromMilliseconds(33.0)
+				Interval = TimeSpan.FromMilliseconds(66.0)
 			};
 			timer.Tick += OnTick;
 		}
@@ -662,7 +662,7 @@ internal sealed class EyesView : Image
 		{
 			Hook();
 		}
-		Present();
+		
 	}
 
 	private void Present()

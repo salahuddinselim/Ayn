@@ -699,7 +699,7 @@ public class ScreenTimeService
 		_lastPollUtc = DateTime.UtcNow;
 		_trackerTimer = new DispatcherTimer
 		{
-			Interval = TimeSpan.FromSeconds(2.0)
+			Interval = TimeSpan.FromSeconds(5.0)
 		};
 		_trackerTimer.Tick += delegate
 		{

@@ -111,17 +111,24 @@ public sealed class DropTool : IBuddyTool, IFileDropTarget, IEscapeAware
 			CompositionTarget.Rendering += frame;
 		}
 
+		private static readonly Pen TrackPen = CreatePen(ThemeTokens.Text);
+		private static readonly Pen AccentPen = CreatePen(ThemeTokens.Accent);
+
+		private static Pen CreatePen(Brush brush)
+		{
+			var pen = new Pen(brush, 6.0) { StartLineCap = PenLineCap.Round, EndLineCap = PenLineCap.Round };
+			pen.Freeze();
+			return pen;
+		}
+
 		protected override void OnRender(DrawingContext dc)
 		{
 			double num = base.Width / 2.0;
 			double num2 = num - 4.0;
 			dc.PushOpacity(0.12);
-			dc.DrawEllipse(null, new Pen(ThemeTokens.Text, 6.0), new Point(num, num), num2, num2);
+			dc.DrawEllipse(null, TrackPen, new Point(num, num), num2, num2);
 			dc.Pop();
-			Pen pen = new Pen(ThemeTokens.Accent, 6.0);
-			pen.StartLineCap = PenLineCap.Round;
-			pen.EndLineCap = PenLineCap.Round;
-			Pen pen2 = pen;
+			Pen pen2 = AccentPen;
 			if (shown >= 0.99999)
 			{
 				dc.DrawEllipse(null, pen2, new Point(num, num), num2, num2);
