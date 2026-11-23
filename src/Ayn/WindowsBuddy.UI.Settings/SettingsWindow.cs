@@ -266,6 +266,7 @@ internal sealed class SettingsWindow : Window
 		Grid.SetColumn(grid, 1);
 		_root.Children.Add(grid);
 		base.Content = _root;
+		WindowsBuddy.Tools.Personal.GlassShell.Apply(this, _root);
 		_toolsUpdated = delegate
 		{
 			if (base.Dispatcher.CheckAccess())

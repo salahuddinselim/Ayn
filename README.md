@@ -44,6 +44,8 @@ conversion) and the .NET/WPF platform.
 - **Appearances** — Pure Black, Ember Dark, Vivid, Silver and **Glass** (warm frosted
   glass with translucent cards and a Mica backdrop on Windows 11). Dark themes stay
   available; Glass is just another choice.
+- **Glass Studio** — in Appearance, a live hero preview with sliders for outer-frame
+  opacity, action-card opacity, blur intensity and border visibility.
 
 ## Where things are
 

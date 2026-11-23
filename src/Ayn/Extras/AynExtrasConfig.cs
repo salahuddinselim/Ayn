@@ -26,6 +26,11 @@ public sealed class AynExtrasConfig
     public string City { get; set; } = "Dhaka";
     public string Country { get; set; } = "Bangladesh";
 
+    public double GlassOuterOpacity { get; set; } = 0.08;
+    public double GlassCardOpacity { get; set; } = 0.55;
+    public double GlassBlur { get; set; } = 16;
+    public double GlassBorderOpacity { get; set; } = 0.20;
+
     private static readonly JsonSerializerOptions Options = new()
     {
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
