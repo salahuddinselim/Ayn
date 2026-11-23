@@ -80,7 +80,7 @@ internal sealed class SettingsWindow : Window
 
 	private readonly Grid _root;
 	private Grid _contentGrid;
-	private Grid _sidebarGrid;
+	private Border _sidebarBorder;
 
 	private StackPanel _navStack;
 
@@ -205,6 +205,7 @@ internal sealed class SettingsWindow : Window
 		base.MinHeight = 360.0;
 		base.MaxHeight = double.PositiveInfinity;
 		base.Height = 720.0;
+		base.WindowStyle = WindowStyle.None;
 		base.AllowsTransparency = true;
 		base.Background = System.Windows.Media.Brushes.Transparent;
 		base.Foreground = SettingsTheme.TextPrimary;
@@ -240,8 +241,8 @@ internal sealed class SettingsWindow : Window
 		{
 			Width = new GridLength(1.0, GridUnitType.Star)
 		});
-		_sidebarGrid = BuildSidebar() as Grid;
-		_root.Children.Add(_sidebarGrid);
+		_sidebarBorder = BuildSidebar() as Border;
+		_root.Children.Add(_sidebarBorder);
 		_contentGrid = new Grid
 		{
 			Background = SettingsTheme.ContentBg
@@ -467,8 +468,8 @@ internal sealed class SettingsWindow : Window
 		var alpha = (byte)Math.Round(255.0 * (1.0 - cfg.SettingsTransparency / 100.0));
 		if (_contentGrid != null)
 			_contentGrid.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(alpha, 11, 11, 12));
-		if (_sidebarGrid != null)
-			_sidebarGrid.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(alpha, 18, 18, 20));
+		if (_sidebarBorder != null)
+			_sidebarBorder.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(alpha, 18, 18, 20));
 	}
 
 	private void ApplyDwmStyle()

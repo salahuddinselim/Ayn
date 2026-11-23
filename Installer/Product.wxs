@@ -1,5 +1,5 @@
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
-  <Package Name="Ayn" Manufacturer="SabrWare" Version="2.0.2.0"
+  <Package Name="Ayn" Manufacturer="SabrWare" Version="2.0.4.0"
            UpgradeCode="8C7A1E42-6D93-4F1B-9A87-2E5C4B1D0F63"
            Scope="perUser">
 
